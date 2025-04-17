@@ -25,8 +25,12 @@ const Navbar = () => {
   return (
     <nav className="py-4 border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-30">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="/" className="text-2xl font-semibold text-navy-800">
-          RevenuePro<span className="text-revenue-600">.</span>
+        <a href="/" className="flex items-center">
+          <img 
+            src="/lovable-uploads/79b5535c-4330-4e2f-80fa-219aa0635eb0.png" 
+            alt="CROquet Logo" 
+            className="h-10 mr-2"
+          />
         </a>
         
         {/* Desktop Navigation */}
@@ -35,7 +39,7 @@ const Navbar = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-navy-700 hover:text-primary transition-colors font-medium"
+              className="text-gray-800 hover:text-purple-600 transition-colors font-medium"
             >
               {item.name}
             </a>
@@ -43,7 +47,9 @@ const Navbar = () => {
         </div>
         
         <div className="hidden md:block">
-          <Button>Schedule Consultation</Button>
+          <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
+            Schedule Consultation
+          </Button>
         </div>
         
         {/* Mobile Navigation */}
@@ -55,11 +61,17 @@ const Navbar = () => {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent>
+            <SheetContent className="bg-gradient-to-br from-yellow-50 via-pink-50 to-purple-50">
               <SheetHeader>
-                <SheetTitle>RevenuePro<span className="text-revenue-600">.</span></SheetTitle>
+                <SheetTitle>
+                  <img 
+                    src="/lovable-uploads/79b5535c-4330-4e2f-80fa-219aa0635eb0.png" 
+                    alt="CROquet Logo" 
+                    className="h-8 mb-2"
+                  />
+                </SheetTitle>
                 <SheetDescription>
-                  Expert Revenue & Sales Strategy Services
+                  Revenue & Sales Strategy Experts
                 </SheetDescription>
               </SheetHeader>
               <div className="flex flex-col gap-4 mt-8">
@@ -67,13 +79,15 @@ const Navbar = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-navy-700 hover:text-primary py-2 transition-colors font-medium"
+                    className="text-gray-800 hover:text-purple-600 py-2 transition-colors font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
                   </a>
                 ))}
-                <Button className="mt-4">Schedule Consultation</Button>
+                <Button className="mt-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
+                  Schedule Consultation
+                </Button>
               </div>
             </SheetContent>
           </Sheet>

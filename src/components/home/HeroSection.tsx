@@ -4,31 +4,31 @@ import { ChevronRight, TrendingUp } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-20 bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="w-full md:w-1/2 space-y-6">
-            <div className="inline-flex items-center rounded-full bg-revenue-50 px-3 py-1 text-sm text-revenue-600 font-medium">
+            <div className="inline-flex items-center rounded-full bg-purple-100 px-3 py-1 text-sm text-purple-600 font-medium">
               <TrendingUp className="h-4 w-4 mr-1" /> 
               Revenue Strategy Experts
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 leading-tight">
-              Transform Your <span className="text-primary">Revenue</span> Strategy
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              Transform Your <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Revenue</span> Strategy
             </h1>
-            <p className="text-lg text-navy-700 max-w-xl">
+            <p className="text-lg text-gray-700 max-w-xl">
               Expert CRO services to accelerate growth, optimize sales processes, and 
               build sustainable revenue operations for B2B companies.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="rounded-md">
+              <Button size="lg" className="rounded-md bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
                 Schedule Consultation <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="rounded-md">
+              <Button size="lg" variant="outline" className="rounded-md border-purple-500 text-purple-700 hover:bg-purple-50">
                 Our Services
               </Button>
             </div>
             <div className="pt-6">
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-gray-500">
                 Trusted by industry leaders across tech, SaaS, and professional services
               </p>
               <div className="flex flex-wrap items-center gap-8 mt-4">
@@ -43,36 +43,42 @@ const HeroSection = () => {
 
           <div className="w-full md:w-1/2 relative">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden p-8 border border-gray-100 relative z-10">
-              <div className="aspect-video bg-gray-100 rounded-lg mb-6"></div>
+              <div className="aspect-video bg-gradient-to-br from-yellow-200 to-pink-200 rounded-lg mb-6 flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/79b5535c-4330-4e2f-80fa-219aa0635eb0.png" 
+                  alt="CROquet Logo" 
+                  className="h-16"
+                />
+              </div>
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                  <div className="h-12 w-12 rounded-full bg-navy-100 flex items-center justify-center">
-                    <TrendingUp className="h-6 w-6 text-primary" />
+                  <div className="h-12 w-12 rounded-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
+                    <TrendingUp className="h-6 w-6 text-purple-500" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy-900">
+                    <h3 className="font-semibold text-gray-900">
                       Strategic Revenue Planning
                     </h3>
-                    <p className="text-sm text-navy-600">
+                    <p className="text-sm text-gray-600">
                       Develop a comprehensive revenue strategy
                     </p>
                   </div>
                 </div>
                 <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
-                  <div className="h-full w-3/4 bg-gradient-to-r from-primary to-revenue-500 rounded-full"></div>
+                  <div className="h-full w-3/4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="font-medium text-navy-700">Current Growth</span>
-                  <span className="font-bold text-revenue-600">+75%</span>
+                  <span className="font-medium text-gray-700">Current Growth</span>
+                  <span className="font-bold text-purple-600">+75%</span>
                 </div>
               </div>
 
-              <div className="absolute -bottom-6 -right-6 h-40 w-40 bg-gradient-to-br from-primary to-revenue-500 rounded-full opacity-10"></div>
+              <div className="absolute -bottom-6 -right-6 h-40 w-40 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-full"></div>
             </div>
             
             {/* Background decorative elements */}
-            <div className="absolute -z-10 top-1/2 -translate-y-1/2 -right-6 h-80 w-80 bg-revenue-100 rounded-full"></div>
-            <div className="absolute -z-10 -bottom-10 -left-10 h-60 w-60 bg-navy-100 rounded-full"></div>
+            <div className="absolute -z-10 top-1/2 -translate-y-1/2 -right-6 h-80 w-80 bg-yellow-100 rounded-full"></div>
+            <div className="absolute -z-10 -bottom-10 -left-10 h-60 w-60 bg-pink-100 rounded-full"></div>
           </div>
         </div>
       </div>
