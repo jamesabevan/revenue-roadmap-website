@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ChevronRight, TrendingUp } from "lucide-react";
 
@@ -45,9 +44,9 @@ const HeroSection = () => {
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden p-8 border border-gray-100 relative z-10">
               <div className="aspect-video bg-gradient-to-br from-yellow-200 to-pink-200 rounded-lg mb-6 flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/79b5535c-4330-4e2f-80fa-219aa0635eb0.png" 
-                  alt="CROquet Logo" 
-                  className="h-16"
+                  src="https://images.unsplash.com/photo-1501854140801-50d01698950b"
+                  alt="Business Growth Landscape" 
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="space-y-6">
