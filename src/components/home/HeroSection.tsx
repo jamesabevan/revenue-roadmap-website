@@ -15,8 +15,7 @@ const HeroSection = () => {
               Transform Your <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Revenue</span> Strategy
             </h1>
             <p className="text-lg text-gray-700 max-w-xl">
-              Expert CRO services to accelerate growth, optimize sales processes, and 
-              build sustainable revenue operations for B2B companies.
+              Expert revenue optimization services to drive strategic growth, streamline sales processes, and build sustainable business performance.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="rounded-md bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
