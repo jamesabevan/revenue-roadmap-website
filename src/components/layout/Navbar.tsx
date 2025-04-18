@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -23,7 +22,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="py-4 border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-30">
+    <nav className="py-4 border-b border-gray-100 bg-transparent backdrop-blur-md sticky top-0 z-30">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="/" className="flex items-center">
           <img 
