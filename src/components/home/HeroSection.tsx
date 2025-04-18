@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ChevronRight, TrendingUp } from "lucide-react";
 
@@ -12,7 +13,7 @@ const HeroSection = () => {
               Transform Your Revenue Strategy
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Transform Your <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Revenue</span> Strategy
+              Revenue, <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Reimagined.</span>
             </h1>
             <p className="text-lg text-gray-700 max-w-xl">
               Expert revenue optimization services to drive strategic growth, streamline sales processes, and build sustainable business performance.
@@ -85,3 +86,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
