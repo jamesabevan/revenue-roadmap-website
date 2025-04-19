@@ -38,7 +38,7 @@ const ExpertiseSection = () => {
             <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm">
               <div className="flex items-start mb-4">
                 <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold">15+</span>
+                  <span className="text-white font-bold">10+</span>
                 </div>
                 <div className="ml-4">
                   <h4 className="font-semibold text-navy-800">Years of Experience</h4>
