@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ChevronRight, TrendingUp } from "lucide-react";
 
@@ -38,45 +39,46 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-        
-        <div className="w-full md:w-1/2 relative">
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden p-8 border border-gray-100 relative z-10">
-            <div className="aspect-video bg-gradient-to-br from-yellow-200 to-pink-200 rounded-lg mb-6 flex items-center justify-center">
-              <img 
-                src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc"
-                alt="Business Growth Graph" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
-                  <TrendingUp className="h-6 w-6 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">
-                    Strategic Revenue Planning
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Develop a comprehensive revenue strategy
-                  </p>
-                </div>
-              </div>
-              <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full w-3/4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className="font-medium text-gray-700">Current Growth</span>
-                <span className="font-bold text-purple-600">+75%</span>
-              </div>
-            </div>
-
-            <div className="absolute -bottom-6 -right-6 h-40 w-40 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-full"></div>
-          </div>
           
-          {/* Background decorative elements */}
-          <div className="absolute -z-10 top-1/2 -translate-y-1/2 -right-6 h-80 w-80 bg-yellow-100 rounded-full"></div>
-          <div className="absolute -z-10 -bottom-10 -left-10 h-60 w-60 bg-pink-100 rounded-full"></div>
+          <div className="w-full md:w-1/2 relative">
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden p-8 border border-gray-100 relative z-10">
+              <div className="aspect-video bg-gradient-to-br from-yellow-200 to-pink-200 rounded-lg mb-6 flex items-center justify-center">
+                <img 
+                  src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc"
+                  alt="Business Growth Graph" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="h-12 w-12 rounded-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
+                    <TrendingUp className="h-6 w-6 text-purple-500" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">
+                      Strategic Revenue Planning
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      Develop a comprehensive revenue strategy
+                    </p>
+                  </div>
+                </div>
+                <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
+                  <div className="h-full w-3/4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="font-medium text-gray-700">Current Growth</span>
+                  <span className="font-bold text-purple-600">+75%</span>
+                </div>
+              </div>
+
+              <div className="absolute -bottom-6 -right-6 h-40 w-40 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-full"></div>
+            </div>
+            
+            {/* Background decorative elements */}
+            <div className="absolute -z-10 top-1/2 -translate-y-1/2 -right-6 h-80 w-80 bg-yellow-100 rounded-full"></div>
+            <div className="absolute -z-10 -bottom-10 -left-10 h-60 w-60 bg-pink-100 rounded-full"></div>
+          </div>
         </div>
       </div>
     </section>
