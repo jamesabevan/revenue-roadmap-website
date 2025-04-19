@@ -48,7 +48,7 @@ const ExpertiseSection = () => {
               
               <div className="flex items-start mb-4">
                 <div className="h-12 w-12 rounded-full bg-revenue-500 flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold">$2B+</span>
+                  <span className="text-white font-bold">$50M+</span>
                 </div>
                 <div className="ml-4">
                   <h4 className="font-semibold text-navy-800">Revenue Growth</h4>
