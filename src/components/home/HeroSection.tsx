@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ChevronRight, TrendingUp } from "lucide-react";
 
@@ -68,7 +67,7 @@ const HeroSection = () => {
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="font-medium text-gray-700">Current Growth</span>
-                  <span className="font-bold text-purple-600">+75%</span>
+                  <span className="font-bold text-purple-600">+43%</span>
                 </div>
               </div>
 
