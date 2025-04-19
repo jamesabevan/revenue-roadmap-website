@@ -1,3 +1,4 @@
+
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2 } from "lucide-react";
 
@@ -13,6 +14,7 @@ const expertiseAreas = [{
   title: "Growth & Scaling",
   points: ["Go-to-market strategy", "New market entry planning", "Channel strategy development", "International expansion", "Growth roadmap creation"]
 }];
+
 const ExpertiseSection = () => {
   return <section id="expertise" className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -32,38 +34,6 @@ const ExpertiseSection = () => {
                 {industries.map((industry, index) => <Badge key={index} variant="outline" className="bg-white text-navy-700 py-1 px-3">
                     {industry}
                   </Badge>)}
-              </div>
-            </div>
-            
-            <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm">
-              <div className="flex items-start mb-4">
-                <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold">10+</span>
-                </div>
-                <div className="ml-4">
-                  <h4 className="font-semibold text-navy-800">Years of Experience</h4>
-                  <p className="text-navy-600">In revenue leadership and sales strategy</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start mb-4">
-                <div className="h-12 w-12 rounded-full bg-revenue-500 flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold">$50M+</span>
-                </div>
-                <div className="ml-4">
-                  <h4 className="font-semibold text-navy-800">Revenue Growth</h4>
-                  <p className="text-navy-600">Generated for our clients</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="h-12 w-12 rounded-full bg-navy-700 flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold">150+</span>
-                </div>
-                <div className="ml-4">
-                  <h4 className="font-semibold text-navy-800">Clients Served</h4>
-                  <p className="text-navy-600">From startup to enterprise</p>
-                </div>
               </div>
             </div>
           </div>
@@ -87,4 +57,5 @@ const ExpertiseSection = () => {
       </div>
     </section>;
 };
+
 export default ExpertiseSection;
