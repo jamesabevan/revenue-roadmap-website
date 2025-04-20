@@ -34,18 +34,10 @@ const ExpertiseSection = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-semibold text-navy-800 mb-6">Core Expertise Areas</h3>
+            
             
             <div className="space-y-8">
-              {expertiseAreas.map((area, index) => <div key={index} className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm">
-                  <h4 className="font-semibold text-navy-800 text-lg mb-4">{area.title}</h4>
-                  <ul className="space-y-3">
-                    {area.points.map((point, idx) => <li key={idx} className="flex items-start">
-                        <CheckCircle2 className="h-5 w-5 text-revenue-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="text-navy-700">{point}</span>
-                      </li>)}
-                  </ul>
-                </div>)}
+              {expertiseAreas.map((area, index) => {})}
             </div>
           </div>
         </div>
