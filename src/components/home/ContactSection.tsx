@@ -1,17 +1,9 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Mail, Phone, Calendar, User, Building2, Send } from "lucide-react";
-
 const ContactSection = () => {
   const [formState, setFormState] = useState({
     name: "",
@@ -19,26 +11,24 @@ const ContactSection = () => {
     phone: "",
     company: "",
     service: "",
-    message: "",
+    message: ""
   });
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormState((prev) => ({
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const {
+      name,
+      value
+    } = e.target;
+    setFormState(prev => ({
       ...prev,
-      [name]: value,
+      [name]: value
     }));
   };
-
   const handleSelectChange = (value: string) => {
-    setFormState((prev) => ({
+    setFormState(prev => ({
       ...prev,
-      service: value,
+      service: value
     }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Would handle form submission here - for demo purposes just console log
@@ -50,13 +40,11 @@ const ContactSection = () => {
       phone: "",
       company: "",
       service: "",
-      message: "",
+      message: ""
     });
     // Show success message (would be implemented in real app)
   };
-
-  return (
-    <section id="contact" className="py-24 bg-white">
+  return <section id="contact" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
@@ -95,7 +83,7 @@ const ContactSection = () => {
                   <h4 className="font-semibold text-navy-800">
                     Call Us Directly
                   </h4>
-                  <p className="text-navy-600">(415) 555-2671</p>
+                  <p className="text-navy-600">+44 7713 499805</p>
                 </div>
               </div>
 
@@ -105,23 +93,12 @@ const ContactSection = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="font-semibold text-navy-800">Email Us</h4>
-                  <p className="text-navy-600">info@revenuepro.com</p>
+                  <p className="text-navy-600">info@thecroquet.com</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-navy-50 rounded-xl p-6">
-              <h4 className="font-semibold text-navy-900 mb-2">
-                Looking for immediate assistance?
-              </h4>
-              <p className="text-navy-700 mb-4">
-                Our team typically responds within 2 business hours during
-                regular business hours.
-              </p>
-              <Button variant="outline" className="gap-2">
-                <Phone className="h-4 w-4" /> Request a Callback
-              </Button>
-            </div>
+            
           </div>
 
           <div>
@@ -136,15 +113,7 @@ const ContactSection = () => {
                     Full Name
                   </label>
                   <div className="relative">
-                    <Input
-                      id="name"
-                      name="name"
-                      placeholder="Your name"
-                      value={formState.name}
-                      onChange={handleInputChange}
-                      className="pl-10"
-                      required
-                    />
+                    <Input id="name" name="name" placeholder="Your name" value={formState.name} onChange={handleInputChange} className="pl-10" required />
                     <User className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                   </div>
                 </div>
@@ -154,16 +123,7 @@ const ContactSection = () => {
                     Email Address
                   </label>
                   <div className="relative">
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="your.email@example.com"
-                      value={formState.email}
-                      onChange={handleInputChange}
-                      className="pl-10"
-                      required
-                    />
+                    <Input id="email" name="email" type="email" placeholder="your.email@example.com" value={formState.email} onChange={handleInputChange} className="pl-10" required />
                     <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                   </div>
                 </div>
@@ -173,15 +133,7 @@ const ContactSection = () => {
                     Phone Number
                   </label>
                   <div className="relative">
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      placeholder="(555) 123-4567"
-                      value={formState.phone}
-                      onChange={handleInputChange}
-                      className="pl-10"
-                    />
+                    <Input id="phone" name="phone" type="tel" placeholder="(555) 123-4567" value={formState.phone} onChange={handleInputChange} className="pl-10" />
                     <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                   </div>
                 </div>
@@ -191,14 +143,7 @@ const ContactSection = () => {
                     Company Name
                   </label>
                   <div className="relative">
-                    <Input
-                      id="company"
-                      name="company"
-                      placeholder="Your company"
-                      value={formState.company}
-                      onChange={handleInputChange}
-                      className="pl-10"
-                    />
+                    <Input id="company" name="company" placeholder="Your company" value={formState.company} onChange={handleInputChange} className="pl-10" />
                     <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                   </div>
                 </div>
@@ -207,10 +152,7 @@ const ContactSection = () => {
                   <label htmlFor="service" className="block text-sm font-medium text-navy-700 mb-1">
                     Service Interested In
                   </label>
-                  <Select
-                    value={formState.service}
-                    onValueChange={handleSelectChange}
-                  >
+                  <Select value={formState.service} onValueChange={handleSelectChange}>
                     <SelectTrigger id="service">
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
@@ -229,14 +171,7 @@ const ContactSection = () => {
                   <label htmlFor="message" className="block text-sm font-medium text-navy-700 mb-1">
                     Your Message
                   </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    placeholder="Tell us about your specific needs or challenges..."
-                    value={formState.message}
-                    onChange={handleInputChange}
-                    rows={4}
-                  />
+                  <Textarea id="message" name="message" placeholder="Tell us about your specific needs or challenges..." value={formState.message} onChange={handleInputChange} rows={4} />
                 </div>
 
                 <Button type="submit" className="w-full gap-2">
@@ -251,8 +186,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;

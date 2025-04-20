@@ -1,4 +1,3 @@
-
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2 } from "lucide-react";
 
@@ -14,7 +13,6 @@ const expertiseAreas = [{
   title: "Growth & Scaling",
   points: ["Go-to-market strategy", "New market entry planning", "Channel strategy development", "International expansion", "Growth roadmap creation"]
 }];
-
 const ExpertiseSection = () => {
   return <section id="expertise" className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -23,10 +21,7 @@ const ExpertiseSection = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-6">
               Deep Expertise Across B2B Industries
             </h2>
-            <p className="text-lg text-navy-700 mb-8">
-              With over 20+ years of experience driving revenue growth and sales transformation, 
-              we bring industry-specific insights to help you achieve exceptional results.
-            </p>
+            <p className="text-lg text-navy-700 mb-8">With over 10+ years of experience driving revenue growth and sales transformation, we bring industry-specific insights to help you achieve exceptional results.</p>
             
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-navy-800 mb-4">Industries We Serve</h3>
@@ -57,5 +52,4 @@ const ExpertiseSection = () => {
       </div>
     </section>;
 };
-
 export default ExpertiseSection;

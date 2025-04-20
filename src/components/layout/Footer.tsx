@@ -1,20 +1,12 @@
-
 import { Mail, MapPin, Phone } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="bg-gray-900 text-white py-12">
+  return <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-gray-800">
           <div>
             <div className="mb-4">
-              <img 
-                src="/lovable-uploads/79b5535c-4330-4e2f-80fa-219aa0635eb0.png" 
-                alt="CROquet Logo" 
-                className="h-10"
-              />
+              <img src="/lovable-uploads/79b5535c-4330-4e2f-80fa-219aa0635eb0.png" alt="CROquet Logo" className="h-10" />
             </div>
             <p className="text-gray-300 mb-4">
               Strategic revenue growth consulting for B2B companies looking to scale their sales operations and maximize profitability.
@@ -66,21 +58,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 text-purple-400 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300">
-                  123 Business Avenue, San Francisco, CA 94111
-                </span>
+                <span className="text-gray-300">Cardiff, UK</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-purple-400 flex-shrink-0" />
-                <a href="tel:+14155552671" className="text-gray-300 hover:text-purple-400 transition-colors">
-                  (415) 555-2671
-                </a>
+                <a href="tel:+14155552671" className="text-gray-300 hover:text-purple-400 transition-colors">+44 7713 499805</a>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-purple-400 flex-shrink-0" />
-                <a href="mailto:info@croquet.com" className="text-gray-300 hover:text-purple-400 transition-colors">
-                  info@croquet.com
-                </a>
+                <a href="mailto:info@croquet.com" className="text-gray-300 hover:text-purple-400 transition-colors">info@thecroquet.com</a>
               </li>
             </ul>
           </div>
@@ -90,8 +76,6 @@ const Footer = () => {
           <p>&copy; {currentYear} CROquet. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
