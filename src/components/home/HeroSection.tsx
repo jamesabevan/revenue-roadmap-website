@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, TrendingUp } from "lucide-react";
-
 const HeroSection = () => {
-  return (
-    <section className="py-20 bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100">
+  return <section className="py-20 bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="w-full md:w-1/2 space-y-6">
@@ -42,11 +40,7 @@ const HeroSection = () => {
           <div className="w-full md:w-1/2 relative">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden p-8 border border-gray-100 relative z-10">
               <div className="aspect-video bg-gradient-to-br from-yellow-200 to-pink-200 rounded-lg mb-6 flex items-center justify-center">
-                <img 
-                  src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc"
-                  alt="Business Growth Graph" 
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Business Growth Graph" className="w-full h-full object-cover" src="/lovable-uploads/31728f87-e4b8-4ab2-b875-c3c2e861eabc.png" />
               </div>
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
@@ -80,8 +74,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;

@@ -1,48 +1,36 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "#services" },
-    { name: "Expertise", href: "#expertise" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Contact", href: "#contact" },
-  ];
-
-  return (
-    <nav className="py-4 border-b border-gray-100 bg-transparent backdrop-blur-md sticky top-0 z-30">
+  const navItems = [{
+    name: "Home",
+    href: "/"
+  }, {
+    name: "Services",
+    href: "#services"
+  }, {
+    name: "Expertise",
+    href: "#expertise"
+  }, {
+    name: "Testimonials",
+    href: "#testimonials"
+  }, {
+    name: "Contact",
+    href: "#contact"
+  }];
+  return <nav className="py-4 border-b border-gray-100 bg-transparent backdrop-blur-md sticky top-0 z-30">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="/" className="flex items-center">
-          <img 
-            src="/lovable-uploads/79b5535c-4330-4e2f-80fa-219aa0635eb0.png" 
-            alt="CROquet Logo" 
-            className="h-10 mr-2"
-          />
+          <img alt="CROquet Logo" className="h-10 mr-2" src="/lovable-uploads/2e3b47af-5c27-4ab1-9bc7-2d7c188ba390.png" />
         </a>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-8">
-          {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-gray-800 hover:text-purple-600 transition-colors font-medium"
-            >
+          {navItems.map(item => <a key={item.name} href={item.href} className="text-gray-800 hover:text-purple-600 transition-colors font-medium">
               {item.name}
-            </a>
-          ))}
+            </a>)}
         </div>
         
         <div className="hidden md:block">
@@ -63,27 +51,16 @@ const Navbar = () => {
             <SheetContent className="bg-gradient-to-br from-yellow-50 via-pink-50 to-purple-50">
               <SheetHeader>
                 <SheetTitle>
-                  <img 
-                    src="/lovable-uploads/79b5535c-4330-4e2f-80fa-219aa0635eb0.png" 
-                    alt="CROquet Logo" 
-                    className="h-8 mb-2"
-                  />
+                  <img src="/lovable-uploads/79b5535c-4330-4e2f-80fa-219aa0635eb0.png" alt="CROquet Logo" className="h-8 mb-2" />
                 </SheetTitle>
                 <SheetDescription>
                   Revenue & Sales Strategy Experts
                 </SheetDescription>
               </SheetHeader>
               <div className="flex flex-col gap-4 mt-8">
-                {navItems.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-gray-800 hover:text-purple-600 py-2 transition-colors font-medium"
-                    onClick={() => setIsOpen(false)}
-                  >
+                {navItems.map(item => <a key={item.name} href={item.href} className="text-gray-800 hover:text-purple-600 py-2 transition-colors font-medium" onClick={() => setIsOpen(false)}>
                     {item.name}
-                  </a>
-                ))}
+                  </a>)}
                 <Button className="mt-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
                   Schedule Consultation
                 </Button>
@@ -92,8 +69,6 @@ const Navbar = () => {
           </Sheet>
         </div>
       </div>
-    </nav>
-  );
+    </nav>;
 };
-
 export default Navbar;
