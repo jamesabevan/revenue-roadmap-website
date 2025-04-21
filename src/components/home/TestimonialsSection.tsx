@@ -1,7 +1,15 @@
 
 import { useState } from "react";
-import { Quote, ChevronLeft, ChevronRight, Building2, Briefcase, Users2 } from "lucide-react";
+import { Building2, Briefcase, Users2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const projects = [{
   title: "Organization Restructure & Compensation Modeling",
@@ -21,21 +29,10 @@ const projects = [{
 }];
 
 const TestimonialsSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  
-  const nextProject = () => {
-    setCurrentIndex(prevIndex => prevIndex === projects.length - 1 ? 0 : prevIndex + 1);
-  };
-  
-  const prevProject = () => {
-    setCurrentIndex(prevIndex => prevIndex === 0 ? projects.length - 1 : prevIndex - 1);
-  };
-  
-  const currentProject = projects[currentIndex];
-
-  return <section id="projects" className="py-[70px]">
-      <div className="py-20 bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+  return (
+    <section id="projects" className="py-12">
+      <div className="bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100 py-12">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Our <span className="bg-gradient-to-r from-yellow-400 to-pink-500 text-transparent bg-clip-text">Projects</span>
           </h2>
@@ -45,38 +42,37 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-navy-800 rounded-2xl p-8 md:p-12 relative">
-            <div className="absolute top-8 left-8 text-revenue-400 opacity-50">
-              {currentProject.icon}
-            </div>
-            
-            <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-white mb-4">{currentProject.title}</h3>
-              
-              <div className="text-xl md:text-2xl font-medium mb-8 text-gray-100">
-                {currentProject.description}
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <div className="text-lg font-medium text-yellow-400">
-                  {currentProject.impact}
-                </div>
-                
-                <div className="flex gap-2">
-                  <Button size="icon" variant="outline" onClick={prevProject} className="border-gray-600 text-gray-300 hover:text-white hover:bg-navy-700">
-                    <ChevronLeft className="h-5 w-5" />
-                  </Button>
-                  <Button size="icon" variant="outline" onClick={nextProject} className="border-gray-600 text-gray-300 hover:text-white hover:bg-navy-700">
-                    <ChevronRight className="h-5 w-5" />
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="max-w-4xl mx-auto px-4">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="relative"
+          >
+            <CarouselContent>
+              {projects.map((project, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/1">
+                  <Card className="bg-white/95 backdrop-blur-sm border border-gray-100 p-8 shadow-lg hover:shadow-xl transition-all">
+                    <div className="h-12 w-12 rounded-lg bg-gradient-to-r from-yellow-400 to-pink-500 flex items-center justify-center mb-6">
+                      {project.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-navy-800 mb-4">{project.title}</h3>
+                    <p className="text-navy-600 mb-6">{project.description}</p>
+                    <div className="text-lg font-medium text-yellow-600">
+                      {project.impact}
+                    </div>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default TestimonialsSection;

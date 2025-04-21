@@ -3,30 +3,38 @@ import { Button } from "@/components/ui/button";
 const services = [{
   icon: <TrendingUp className="h-6 w-6" />,
   title: "Revenue Strategy Development",
-  description: "Comprehensive analysis and strategic planning to align sales, marketing, and customer success for optimal revenue growth."
+  description: "Comprehensive analysis and strategic planning to align sales, marketing, and customer success for optimal revenue growth.",
+  link: "/services/revenue-strategy"
 }, {
   icon: <BarChart3 className="h-6 w-6" />,
   title: "Sales Process Optimization",
-  description: "Refine your sales methodology, pipeline management, and forecasting to increase win rates and deal sizes."
+  description: "Refine your sales methodology, pipeline management, and forecasting to increase win rates and deal sizes.",
+  link: "/services/sales-process"
 }, {
   icon: <Users className="h-6 w-6" />,
   title: "Sales Team Development",
-  description: "Build high-performing sales teams through effective hiring, training, coaching, and compensation structures."
+  description: "Build high-performing sales teams through effective hiring, training, coaching, and compensation structures.",
+  link: "/services/sales-team"
 }, {
   icon: <PieChart className="h-6 w-6" />,
   title: "Revenue Operations",
-  description: "Streamline processes across marketing, sales, and customer success to create a unified revenue generation engine."
+  description: "Streamline processes across marketing, sales, and customer success to create a unified revenue generation engine.",
+  link: "/services/revenue-operations"
 }, {
   icon: <Building className="h-6 w-6" />,
   title: "Fractional CRO Services",
-  description: "Experienced leadership to drive your revenue organization during transitions or rapid growth phases."
+  description: "Experienced leadership to drive your revenue organization during transitions or rapid growth phases.",
+  link: "/services/fractional-cro"
 }, {
   icon: <Users2 className="h-6 w-6" />,
   title: "Go-to-Market Strategy",
-  description: "Develop and execute effective market entry strategies for new products, services, or territories."
+  description: "Develop and execute effective market entry strategies for new products, services, or territories.",
+  link: "/services/go-to-market"
 }];
+
 const ServicesSection = () => {
-  return <section id="services" className="py-24 bg-white">
+  return (
+    <section id="services" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
@@ -39,16 +47,18 @@ const ServicesSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => <div key={index} className="bg-white border border-gray-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow group">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white border border-gray-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow group">
               <div className="h-12 w-12 rounded-lg bg-gradient-to-r from-yellow-400 to-pink-500 flex items-center justify-center mb-6 transition-all group-hover:brightness-90">
                 {service.icon}
               </div>
               <h3 className="text-xl font-semibold text-navy-800 mb-3">{service.title}</h3>
               <p className="text-navy-600 mb-6">{service.description}</p>
-              <a href="#" className="text-primary font-medium flex items-center hover:text-revenue-600 transition-colors">
+              <a href={service.link} className="text-primary font-medium flex items-center hover:text-revenue-600 transition-colors">
                 Learn More <span className="ml-1">→</span>
               </a>
-            </div>)}
+            </div>
+          ))}
         </div>
 
         <div className="mt-16 text-center">
@@ -57,7 +67,8 @@ const ServicesSection = () => {
           </Button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default ServicesSection;
