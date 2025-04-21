@@ -29,10 +29,10 @@ const HeroSection = () => {
               </p>
               <div className="flex flex-wrap items-center gap-8 mt-4">
                 {/* Company Logos - Placeholder gray boxes */}
-                <div className="h-6 w-24 bg-gray-300 rounded"></div>
-                <div className="h-6 w-20 bg-gray-300 rounded"></div>
-                <div className="h-6 w-28 bg-gray-300 rounded"></div>
-                <div className="h-6 w-16 bg-gray-300 rounded"></div>
+                
+                
+                
+                
               </div>
             </div>
           </div>
