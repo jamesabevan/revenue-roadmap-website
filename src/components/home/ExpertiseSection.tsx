@@ -1,3 +1,4 @@
+
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2 } from "lucide-react";
 const industries = ["SaaS", "Technology", "Professional Services", "Financial Services", "Manufacturing", "Healthcare", "B2B Services", "Cybersecurity"];
@@ -32,7 +33,19 @@ const ExpertiseSection = () => {
           </div>
           
           <div className="space-y-8">
-            {expertiseAreas.map((area, index) => {})}
+            {expertiseAreas.map((area, index) => (
+              <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                <h3 className="text-xl font-semibold text-navy-800 mb-4">{area.title}</h3>
+                <ul className="space-y-2">
+                  {area.points.map((point, pointIndex) => (
+                    <li key={pointIndex} className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-yellow-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-navy-700">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </div>
