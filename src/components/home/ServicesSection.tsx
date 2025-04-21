@@ -18,7 +18,7 @@ const services = [{
   description: "Streamline processes across marketing, sales, and customer success to create a unified revenue generation engine."
 }, {
   icon: <Building className="h-6 w-6" />,
-  title: "Interim CRO Services",
+  title: "Fractional CRO Services",
   description: "Experienced leadership to drive your revenue organization during transitions or rapid growth phases."
 }, {
   icon: <Users2 className="h-6 w-6" />,
@@ -30,7 +30,7 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
-            Comprehensive Revenue & Sales Services
+            Comprehensive <span className="bg-gradient-to-r from-yellow-400 to-pink-500 text-transparent bg-clip-text">Revenue & Sales</span> Services
           </h2>
           <p className="text-lg text-navy-700">
             We help B2B companies build, optimize, and scale their revenue generation capabilities 
@@ -59,4 +59,5 @@ const ServicesSection = () => {
       </div>
     </section>;
 };
+
 export default ServicesSection;
