@@ -40,7 +40,7 @@ const HeroSection = () => {
           <div className="w-full md:w-1/2 relative">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden p-8 border border-gray-100 relative z-10">
               <div className="aspect-video bg-gradient-to-br from-yellow-200 to-pink-200 rounded-lg mb-6 flex items-center justify-center">
-                <img alt="Business Growth Graph" className="w-full h-full object-cover" src="/lovable-uploads/31728f87-e4b8-4ab2-b875-c3c2e861eabc.png" />
+                <img alt="Business Growth Graph" className="w-full h-full object-cover" src="/lovable-uploads/2ee15c94-c416-4501-8e61-e246bdbf5574.png" />
               </div>
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
