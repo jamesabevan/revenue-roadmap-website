@@ -26,12 +26,10 @@ const TestimonialsSection = () => {
     setCurrentIndex(prevIndex => prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1);
   };
   const currentTestimonial = testimonials[currentIndex];
-  return <section id="testimonials" className="py-20 bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100">
+  return <section id="testimonials" className="bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100 py-[70px]">
       <div className="py-20 bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block text-revenue-400 font-medium mb-2">
-            Client Success Stories
-          </span>
+          
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             What Our Clients Say
           </h2>
