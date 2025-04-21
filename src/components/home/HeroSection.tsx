@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, TrendingUp } from "lucide-react";
-
 const HeroSection = () => {
   return <section className="py-20 bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100">
       <div className="container mx-auto px-4">
@@ -20,7 +19,7 @@ const HeroSection = () => {
               <Button size="lg" className="rounded-md bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
                 Schedule Consultation <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="rounded-md border-purple-500 text-purple-700 hover:bg-purple-50">
+              <Button size="lg" variant="outline" className="rounded-md border border-purple-500 text-purple-700 hover:bg-purple-50 hover:text-purple-700">
                 Our Services
               </Button>
             </div>
@@ -77,5 +76,4 @@ const HeroSection = () => {
       </div>
     </section>;
 };
-
 export default HeroSection;
