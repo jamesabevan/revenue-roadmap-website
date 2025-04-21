@@ -1,36 +1,79 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, X } from "lucide-react";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { Menu } from "lucide-react";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const services = [
+    { name: "Revenue Strategy", href: "/services/revenue-strategy" },
+    { name: "Sales Process", href: "/services/sales-process" },
+    { name: "Sales Team", href: "/services/sales-team" },
+    { name: "Revenue Operations", href: "/services/revenue-operations" },
+    { name: "Fractional CRO", href: "/services/fractional-cro" },
+    { name: "Go-to-Market", href: "/services/go-to-market" }
+  ];
+
   const navItems = [{
     name: "Home",
     href: "/"
   }, {
     name: "Services",
-    href: "#services"
+    href: "#services",
+    hasDropdown: true
   }, {
     name: "About Us",
-    href: "#about"
+    href: "/about"
   }, {
-    name: "Testimonials",
-    href: "#testimonials"
+    name: "Projects",
+    href: "#projects"
   }, {
     name: "Contact",
     href: "#contact"
   }];
-  return <nav className="py-4 border-b-[0.5px] border-gray-100 bg-transparent backdrop-blur-md sticky top-0 z-30">
+
+  return (
+    <nav className="py-4 border-b-[0.5px] border-gray-100 bg-transparent backdrop-blur-md sticky top-0 z-30">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="/" className="flex items-center">
           <img alt="CROquet Logo" src="/lovable-uploads/f43c7108-e965-4ce0-86a3-594bd4da207d.png" className="h-20 object-fill" />
         </a>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-8">
-          {navItems.map(item => <a key={item.name} href={item.href} className="text-gray-800 hover:text-purple-600 transition-colors font-medium">
-              {item.name}
-            </a>)}
+        <div className="hidden md:flex gap-8 items-center">
+          {navItems.map(item => 
+            item.hasDropdown ? (
+              <NavigationMenu key={item.name}>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-gray-800 hover:text-purple-600 transition-colors font-medium bg-transparent">
+                      {item.name}
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="grid w-[400px] gap-3 p-4 bg-white">
+                        {services.map((service) => (
+                          <a
+                            key={service.name}
+                            href={service.href}
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-50"
+                          >
+                            <div className="text-sm font-medium leading-none text-gray-800">{service.name}</div>
+                          </a>
+                        ))}
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+            ) : (
+              <a key={item.name} href={item.href} className="text-gray-800 hover:text-purple-600 transition-colors font-medium">
+                {item.name}
+              </a>
+            )
+          )}
         </div>
         
         <div className="hidden md:block">
@@ -58,9 +101,34 @@ const Navbar = () => {
                 </SheetDescription>
               </SheetHeader>
               <div className="flex flex-col gap-4 mt-8">
-                {navItems.map(item => <a key={item.name} href={item.href} className="text-gray-800 hover:text-purple-600 py-2 transition-colors font-medium" onClick={() => setIsOpen(false)}>
-                    {item.name}
-                  </a>)}
+                {navItems.map(item => 
+                  item.hasDropdown ? (
+                    <div key={item.name} className="space-y-2">
+                      <div className="font-medium text-gray-800">{item.name}</div>
+                      <div className="pl-4 space-y-2">
+                        {services.map(service => (
+                          <a
+                            key={service.name}
+                            href={service.href}
+                            className="block text-gray-800 hover:text-purple-600 py-1 transition-colors"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {service.name}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="text-gray-800 hover:text-purple-600 py-2 transition-colors font-medium"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </a>
+                  )
+                )}
                 <Button className="mt-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
                   Schedule Consultation
                 </Button>
@@ -69,6 +137,8 @@ const Navbar = () => {
           </Sheet>
         </div>
       </div>
-    </nav>;
+    </nav>
+  );
 };
+
 export default Navbar;

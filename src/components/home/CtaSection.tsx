@@ -1,7 +1,15 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+
 const CtaSection = () => {
-  return <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-500 text-white">
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services');
+    servicesSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-500 text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -15,12 +23,19 @@ const CtaSection = () => {
             <Button size="lg" variant="secondary" className="gap-2 bg-white text-purple-600 hover:bg-gray-100">
               Schedule Consultation <ArrowRight className="h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white bg-gray-50 text-purple-600">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white bg-gray-50 text-purple-600"
+              onClick={scrollToServices}
+            >
               Learn More
             </Button>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default CtaSection;

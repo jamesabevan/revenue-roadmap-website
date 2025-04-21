@@ -49,8 +49,10 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div key={index} className="bg-white border border-gray-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow group">
-              <div className="h-12 w-12 rounded-lg bg-gradient-to-r from-yellow-400 to-pink-500 flex items-center justify-center mb-6 transition-all group-hover:brightness-90">
-                {service.icon}
+              <div className="h-12 w-12 rounded-lg bg-gradient-to-r from-yellow-400 to-pink-500 flex items-center justify-center mb-6 transition-all group-hover:from-yellow-300 group-hover:to-pink-400">
+                <div className="text-white transition-colors group-hover:text-white/90">
+                  {service.icon}
+                </div>
               </div>
               <h3 className="text-xl font-semibold text-navy-800 mb-3">{service.title}</h3>
               <p className="text-navy-600 mb-6">{service.description}</p>

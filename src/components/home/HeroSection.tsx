@@ -1,7 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, TrendingUp } from "lucide-react";
+
 const HeroSection = () => {
-  return <section className="py-20 bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100">
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services');
+    servicesSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="w-full md:w-1/2 space-y-6">
@@ -19,7 +26,12 @@ const HeroSection = () => {
               <Button size="lg" className="rounded-md bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
                 Schedule Consultation <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="rounded-md border border-purple-500 text-purple-700 hover:bg-purple-50 hover:text-purple-700">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="rounded-md border border-purple-500 text-purple-700 hover:bg-purple-50 hover:text-purple-700"
+                onClick={scrollToServices}
+              >
                 Our Services
               </Button>
             </div>
@@ -74,6 +86,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
