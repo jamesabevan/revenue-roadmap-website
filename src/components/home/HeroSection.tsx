@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, TrendingUp } from "lucide-react";
+
 const HeroSection = () => {
   return <section className="py-20 bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100">
       <div className="container mx-auto px-4">
@@ -76,4 +77,5 @@ const HeroSection = () => {
       </div>
     </section>;
 };
+
 export default HeroSection;

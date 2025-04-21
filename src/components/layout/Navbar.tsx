@@ -20,10 +20,11 @@ const Navbar = () => {
     name: "Contact",
     href: "#contact"
   }];
+
   return <nav className="py-4 border-b border-gray-100 bg-transparent backdrop-blur-md sticky top-0 z-30">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="/" className="flex items-center">
-          <img alt="CROquet Logo" className="h-10 mr-2" src="/lovable-uploads/2e3b47af-5c27-4ab1-9bc7-2d7c188ba390.png" />
+          <img alt="CROquet Logo" className="h-12" src="/lovable-uploads/79b5535c-4330-4e2f-80fa-219aa0635eb0.png" />
         </a>
         
         {/* Desktop Navigation */}
@@ -71,4 +72,5 @@ const Navbar = () => {
       </div>
     </nav>;
 };
+
 export default Navbar;
