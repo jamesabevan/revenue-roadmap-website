@@ -1,6 +1,7 @@
 
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MessageSquare, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MessageDialog } from "./MessageDialog";
 
 const ContactSection = () => {
   return (
@@ -37,10 +38,10 @@ const ContactSection = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-yellow-400 to-pink-500 flex items-center justify-center">
-                <MapPin className="h-7 w-7 text-white" />
+                <MessageSquare className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
-              <p className="text-gray-600">Cardiff, UK</p>
+              <h3 className="text-xl font-semibold mb-2">Message Us</h3>
+              <MessageDialog />
             </div>
           </div>
 
