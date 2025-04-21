@@ -33,7 +33,7 @@ const TestimonialsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             What Our Clients Say
           </h2>
-          <p className="text-lg text-gray-300">
+          <p className="text-lg text-slate-900">
             We've helped numerous companies transform their revenue strategies and achieve 
             exceptional growth. Here's what they have to say about working with us.
           </p>

@@ -5,8 +5,8 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-gray-800">
           <div>
-            <div className="mb-4">
-              <img src="/lovable-uploads/79b5535c-4330-4e2f-80fa-219aa0635eb0.png" alt="CROquet Logo" className="h-10" />
+            <div className="mb-2">
+              <img alt="CROquet Logo" src="/lovable-uploads/643bc363-4d1c-4e7e-b21a-8c25e54abe92.png" className="h-20" />
             </div>
             <p className="text-gray-300 mb-4">
               Strategic revenue growth consulting for B2B companies looking to scale their sales operations and maximize profitability.
