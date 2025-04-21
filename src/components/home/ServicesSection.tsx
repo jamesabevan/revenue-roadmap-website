@@ -29,7 +29,7 @@ const ServicesSection = () => {
   return <section id="services" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
+          <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
             Comprehensive Revenue & Sales Services
           </h2>
           <p className="text-lg text-navy-700">
