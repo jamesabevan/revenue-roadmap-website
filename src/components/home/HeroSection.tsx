@@ -62,7 +62,7 @@ const HeroSection = () => {
                   <div className="h-full w-3/4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="font-medium text-gray-700">Your Roadmap Start Here</span>
+                  <span className="font-medium text-gray-700">Your Roadmap Starts Here</span>
                   
                 </div>
               </div>
