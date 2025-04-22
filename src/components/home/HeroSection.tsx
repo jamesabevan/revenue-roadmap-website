@@ -1,14 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, TrendingUp } from "lucide-react";
-
 const HeroSection = () => {
   const scrollToServices = () => {
     const servicesSection = document.getElementById('services');
-    servicesSection?.scrollIntoView({ behavior: 'smooth' });
+    servicesSection?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100">
+  return <section className="py-20 bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="w-full md:w-1/2 space-y-6">
@@ -26,12 +25,7 @@ const HeroSection = () => {
               <Button size="lg" className="rounded-md bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
                 Schedule Consultation <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="rounded-md border border-purple-500 text-purple-700 hover:bg-purple-50 hover:text-purple-700"
-                onClick={scrollToServices}
-              >
+              <Button size="lg" variant="outline" className="rounded-md border border-purple-500 text-purple-700 hover:bg-purple-50 hover:text-purple-700" onClick={scrollToServices}>
                 Our Services
               </Button>
             </div>
@@ -60,24 +54,20 @@ const HeroSection = () => {
                     <TrendingUp className="h-6 w-6 text-purple-500" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">
-                      Strategic Revenue Planning
-                    </h3>
-                    <p className="text-sm text-gray-600">
-                      Develop a comprehensive revenue strategy
-                    </p>
+                    <h3 className="font-semibold text-gray-900 text-left">Design. Align. Grow</h3>
+                    <p className="text-sm text-gray-600">Strategic Revenue Planning That Drives Results</p>
                   </div>
                 </div>
                 <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
                   <div className="h-full w-3/4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="font-medium text-gray-700">Current Growth</span>
-                  <span className="font-bold text-purple-600">+43%</span>
+                  <span className="font-medium text-gray-700">Your Roadmap Start Here</span>
+                  
                 </div>
               </div>
 
-              <div className="absolute -bottom-6 -right-6 h-40 w-40 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-full"></div>
+              
             </div>
             
             {/* Background decorative elements */}
@@ -86,8 +76,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
