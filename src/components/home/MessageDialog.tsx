@@ -24,15 +24,7 @@ export function MessageDialog() {
   })
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Here you would typically send the message to your backend
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you soon.",
-    })
-    setIsOpen(false)
-    setFormData({ name: "", email: "", company: "", message: "" })
-  }
+   
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
@@ -55,7 +47,14 @@ export function MessageDialog() {
             We'll get back to you as soon as possible.
           </DialogDescription>
         </DialogHeader>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  onSubmit={handleSubmit}
+  className="space-y-4"
+>
+  <input type="hidden" name="form-name" value="contact" />
           <div>
             <Input
               placeholder="Your name"
