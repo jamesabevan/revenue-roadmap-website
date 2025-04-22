@@ -2,11 +2,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Menu } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const services = [
     { name: "Revenue Strategy", href: "/services/revenue-strategy" },
@@ -16,6 +18,22 @@ const Navbar = () => {
     { name: "Fractional CRO", href: "/services/fractional-cro" },
     { name: "Go-to-Market", href: "/services/go-to-market" }
   ];
+
+  const handleNavigation = (path: string) => {
+    const isSection = path.startsWith("#");
+    if (isSection && !window.location.pathname.includes(path)) {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(path.substring(1));
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else if (isSection) {
+      const element = document.getElementById(path.substring(1));
+      element?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate(path);
+    }
+  };
 
   const navItems = [{
     name: "Home",
@@ -29,17 +47,17 @@ const Navbar = () => {
     href: "/about"
   }, {
     name: "Projects",
-    href: "/#projects"
+    href: "#projects"
   }, {
     name: "Contact",
-    href: "/#contact"
+    href: "#contact"
   }];
 
   return (
     <nav className="py-4 border-b-[0.5px] border-gray-100 bg-transparent backdrop-blur-md sticky top-0 z-30">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="/" className="flex items-center">
-          <img alt="CROquet Logo" src="/lovable-uploads/f43c7108-e965-4ce0-86a3-594bd4da207d.png" className="h-20 object-fill" />
+          <img alt="CROquet Logo" src="/lovable-uploads/f43c7108-e965-4ce0-86a3-594bd4da207d.png" className="h-32 -my-6 object-contain" />
         </a>
         
         {/* Desktop Navigation */}
@@ -59,6 +77,7 @@ const Navbar = () => {
                             key={service.name}
                             href={service.href}
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-50"
+                            onClick={() => setIsOpen(false)}
                           >
                             <div className="text-sm font-medium leading-none text-gray-800">{service.name}</div>
                           </a>
@@ -69,9 +88,13 @@ const Navbar = () => {
                 </NavigationMenuList>
               </NavigationMenu>
             ) : (
-              <a key={item.name} href={item.href} className="text-gray-800 hover:text-purple-600 transition-colors font-medium">
+              <button
+                key={item.name}
+                onClick={() => handleNavigation(item.href)}
+                className="text-gray-800 hover:text-purple-600 transition-colors font-medium"
+              >
                 {item.name}
-              </a>
+              </button>
             )
           )}
         </div>

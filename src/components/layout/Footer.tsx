@@ -1,3 +1,4 @@
+
 import { Mail, MapPin, Phone } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -31,22 +32,22 @@ const Footer = () => {
             <h4 className="text-lg font-medium mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#services" className="text-gray-300 hover:text-purple-400 transition-colors">
+                <a href="/#services" className="text-gray-300 hover:text-purple-400 transition-colors">
                   Our Services
                 </a>
               </li>
               <li>
-                <a href="#expertise" className="text-gray-300 hover:text-purple-400 transition-colors">
+                <a href="/#expertise" className="text-gray-300 hover:text-purple-400 transition-colors">
                   Expertise
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="text-gray-300 hover:text-purple-400 transition-colors">
-                  Client Success Stories
+                <a href="/#projects" className="text-gray-300 hover:text-purple-400 transition-colors">
+                  Our Projects
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-300 hover:text-purple-400 transition-colors">
+                <a href="/#contact" className="text-gray-300 hover:text-purple-400 transition-colors">
                   Contact Us
                 </a>
               </li>
