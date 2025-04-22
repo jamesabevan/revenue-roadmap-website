@@ -50,7 +50,6 @@ export function MessageDialog() {
   name="contact"
   method="POST"
   data-netlify="true"
-  onSubmit={handleSubmit}
   className="space-y-4"
 >
   <input type="hidden" name="form-name" value="contact" />
