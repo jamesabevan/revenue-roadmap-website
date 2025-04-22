@@ -19,5 +19,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  publicDir: "public", // ✅ <-- Add this line!
+  publicDir: "public", //
 }));
