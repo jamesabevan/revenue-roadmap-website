@@ -23,7 +23,6 @@ export function MessageDialog() {
     message: ""
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
    
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
