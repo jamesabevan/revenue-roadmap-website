@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+
 const About = () => {
   return <Layout>
       <div className="py-16 md:py-24 bg-gradient-to-br from-yellow-50 via-pink-50 to-purple-50">
@@ -26,8 +27,8 @@ const About = () => {
               <Card className="bg-white/50 backdrop-blur-sm">
                 <CardContent className="p-6">
                   <h2 className="text-2xl font-semibold mb-4 text-purple-700">Experience</h2>
-                  <p className="mb-4">With extensive experience in the healthcare, medical devices as well as software and professional services industries, I've held various leadership positions focusing on strategic growth, team development, and revenue generation. 
-For further information about my career and experience please check out my LinkedIn : www.linkedin.com/in/james-a-bevan</p>
+                  <p className="mb-4">With extensive experience in the healthcare, medical devices as well as software and professional services industries, I've held various leadership positions focusing on strategic growth, team development, and revenue generation. 
+For further information about my career and experience please check out my <a href="https://www.linkedin.com/in/james-a-bevan" className="text-purple-600 hover:text-purple-800" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
                   <div className="mt-4">
                     <h3 className="font-medium text-gray-700 mb-2">Core Competencies:</h3>
                     <ul className="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -64,4 +65,5 @@ For further information about my career and experience please check out my Linke
       </div>
     </Layout>;
 };
+
 export default About;
