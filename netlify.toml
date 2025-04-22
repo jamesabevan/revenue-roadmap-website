@@ -1,8 +1,8 @@
 [build]
-  command = "bun run build && cp public/contact.html dist/contact.html && cp public/_redirects dist/_redirects"
-  publish = "dist"
+command = "bun run build && cp public/contact.html dist/contact.html"
+publish = "dist"
 
 [[redirects]]
-  from = "/contact"
-  to = "/contact.html"
-  status = 200
+from = "/contact"
+to = "/contact.html"
+status = 200
