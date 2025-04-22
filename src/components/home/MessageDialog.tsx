@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -23,8 +22,6 @@ export function MessageDialog() {
     message: ""
   })
 
-   
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
@@ -47,12 +44,18 @@ export function MessageDialog() {
           </DialogDescription>
         </DialogHeader>
         <form
-  name="contact"
-  method="POST"
-  data-netlify="true"
-  className="space-y-4"
->
-  <input type="hidden" name="form-name" value="contact" />
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          className="space-y-4"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don’t fill this out: <input name="bot-field" />
+            </label>
+          </p>
           <div>
             <Input
               placeholder="Your name"
@@ -90,7 +93,10 @@ export function MessageDialog() {
               className="min-h-[100px]"
             />
           </div>
-          <Button type="submit" className="w-full bg-gradient-to-r from-yellow-400 to-pink-500 hover:from-yellow-500 hover:to-pink-600">
+          <Button
+            type="submit"
+            className="w-full bg-gradient-to-r from-yellow-400 to-pink-500 hover:from-yellow-500 hover:to-pink-600"
+          >
             Send message
           </Button>
         </form>
