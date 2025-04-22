@@ -30,9 +30,7 @@ const HeroSection = () => {
               </Button>
             </div>
             <div className="pt-6">
-              <p className="text-sm text-gray-500">
-                Trusted by industry leaders across tech, SaaS, and professional services
-              </p>
+              <p className="text-sm text-gray-500">Trusted by industry leaders across healthcare, medical devices, tech, SaaS, and professional services</p>
               <div className="flex flex-wrap items-center gap-8 mt-4">
                 {/* Company Logos - Placeholder gray boxes */}
                 
