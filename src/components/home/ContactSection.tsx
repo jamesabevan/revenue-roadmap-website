@@ -1,7 +1,7 @@
 
 import { Mail, MessageSquare, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { MessageDialog } from "./MessageDialog";
+import ContactForm from "./ContactForm";
 
 const ContactSection = () => {
   return (
@@ -15,7 +15,7 @@ const ContactSection = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-yellow-400 to-pink-500 flex items-center justify-center">
                 <Phone className="h-7 w-7 text-white" />
@@ -40,9 +40,13 @@ const ContactSection = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-yellow-400 to-pink-500 flex items-center justify-center">
                 <MessageSquare className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Message Us</h3>
-              <MessageDialog />
+              <h3 className="text-xl font-semibold mb-2">Send a Message</h3>
+              <p className="text-gray-600">Fill out our form below</p>
             </div>
+          </div>
+
+          <div className="bg-gray-50 rounded-lg p-8 shadow-sm">
+            <ContactForm />
           </div>
 
           <div className="mt-16 text-center">
