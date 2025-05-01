@@ -1,6 +1,5 @@
-
 import { BarChart3, Users, TrendingUp, PieChart, Building, Users2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+
 const services = [{
   icon: <TrendingUp className="h-6 w-6" />,
   title: "Revenue Strategy Development",
@@ -62,12 +61,6 @@ const ServicesSection = () => {
               </a>
             </div>
           ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 calendly-open-button">
-            Schedule a Strategy Call
-          </Button>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 
 import { Mail, MessageSquare, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import ContactForm from "./ContactForm";
+import { ScheduleConsultationButton } from "@/components/ScheduleConsultationButton";
 
 const ContactSection = () => {
   return (
@@ -50,9 +50,7 @@ const ContactSection = () => {
           </div>
 
           <div className="mt-16 text-center">
-            <Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 calendly-open-button">
-              Schedule a Consultation
-            </Button>
+            <ScheduleConsultationButton />
           </div>
         </div>
       </div>

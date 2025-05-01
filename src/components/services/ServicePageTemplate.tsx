@@ -1,7 +1,7 @@
 
 import React from "react";
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
+import { ScheduleConsultationButton } from "@/components/ScheduleConsultationButton";
 
 interface Benefit {
   title: string;
@@ -85,9 +85,7 @@ const ServicePageTemplate = ({
 
           {/* CTA Section */}
           <div className="text-center">
-            <Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
-              {ctaText}
-            </Button>
+            <ScheduleConsultationButton />
           </div>
         </div>
       </div>
