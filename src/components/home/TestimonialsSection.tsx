@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Building2, Briefcase, Users2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,20 +12,20 @@ import {
 } from "@/components/ui/carousel";
 
 const projects = [{
-  title: "Organization Restructure & Compensation Modeling",
-  description: "Implemented a comprehensive organizational restructure and developed a performance-based compensation model that increased team productivity by 40% and improved retention rates.",
+  title: "Organizational Redesign & Streamlining",
+  description: "Redesigned a siloed sales function into a streamlined, unified team structure that delivered over 30% year-over-year growth and significantly enhanced operational efficiency.",
   icon: <Building2 className="h-6 w-6" />,
-  impact: "40% increase in team productivity"
+  impact: "30% year-over-year growth"
 }, {
   title: "GTM Strategy for SaaS Startup",
-  description: "Developed and executed a market entry strategy for a B2B SaaS platform, resulting in successful product launch and acquisition of first 50 enterprise customers within 6 months.",
+  description: "Designed and implemented a focused go-to-market motion that accelerated customer acquisition and positioned SaaS organisation for launch and for rapid scale.",
   icon: <Briefcase className="h-6 w-6" />,
-  impact: "50 enterprise customers in 6 months"
+  impact: "Accelerated customer acquisition"
 }, {
   title: "Partner Program Development",
-  description: "Built a comprehensive partner program from ground up, including partner tiers, enablement materials, and compensation structure, leading to 60% of revenue being partner-influenced.",
+  description: "Built a comprehensive partner program from the ground up, including partner tiers, enablement materials, and a structured compensation framework, driving significant partner-influenced revenue growth.",
   icon: <Users2 className="h-6 w-6" />,
-  impact: "60% partner-influenced revenue"
+  impact: "Significant revenue growth"
 }];
 
 const TestimonialsSection = () => {

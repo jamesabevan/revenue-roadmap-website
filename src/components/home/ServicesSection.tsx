@@ -1,3 +1,4 @@
+
 import { BarChart3, Users, TrendingUp, PieChart, Building, Users2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const services = [{
@@ -64,7 +65,7 @@ const ServicesSection = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
+          <Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 calendly-open-button">
             Schedule a Strategy Call
           </Button>
         </div>

@@ -20,7 +20,7 @@ const CtaSection = () => {
             accelerate growth and optimize your sales operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="gap-2 bg-white text-purple-600 hover:bg-gray-100">
+            <Button size="lg" variant="secondary" className="gap-2 bg-white text-purple-600 hover:bg-gray-100 calendly-open-button">
               Schedule Consultation <ArrowRight className="h-4 w-4" />
             </Button>
             <Button 

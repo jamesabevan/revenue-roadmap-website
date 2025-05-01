@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -21,12 +22,48 @@ export function MessageDialog() {
     company: "",
     message: ""
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contact',
+          ...formData
+        }).toString()
+      })
+      
+      if (response.ok) {
+        toast({
+          title: "Message sent",
+          description: "Thank you for your message. We'll get back to you shortly."
+        })
+        setFormData({ name: "", email: "", company: "", message: "" })
+        setIsOpen(false)
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Your message couldn't be sent. Please try again.",
+        variant: "destructive"
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -49,11 +86,13 @@ export function MessageDialog() {
           data-netlify="true"
           netlify-honeypot="bot-field"
           className="space-y-4"
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="to" value="info@thecroquet.com" />
           <p hidden>
             <label>
-              Don’t fill this out: <input name="bot-field" />
+              Don't fill this out: <input name="bot-field" />
             </label>
           </p>
           <div>
@@ -96,8 +135,9 @@ export function MessageDialog() {
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-yellow-400 to-pink-500 hover:from-yellow-500 hover:to-pink-600"
+            disabled={isSubmitting}
           >
-            Send message
+            {isSubmitting ? "Sending..." : "Send message"}
           </Button>
         </form>
       </DialogContent>

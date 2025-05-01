@@ -21,8 +21,8 @@ const ContactSection = () => {
                 <Phone className="h-7 w-7 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-              <a href="tel:+447713499805" className="text-gray-600 hover:text-purple-600 transition-colors">
-                +44 7713 499805
+              <a href="tel:02922523408" className="text-gray-600 hover:text-purple-600 transition-colors">
+                029 2252 3408
               </a>
             </div>
 
@@ -46,11 +46,16 @@ const ContactSection = () => {
           </div>
 
           <div className="mt-16 text-center">
-            <Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
+            <Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 calendly-open-button">
               Schedule a Consultation
             </Button>
           </div>
         </div>
+      </div>
+
+      {/* Calendly Script */}
+      <div style={{ display: 'none' }}>
+        <div className="calendly-inline-widget" data-url="https://calendly.com/james-thecroquet/30min"></div>
       </div>
     </section>
   );
