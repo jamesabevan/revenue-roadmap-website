@@ -61,6 +61,7 @@ export function MessageDialog() {
         description: "Your message couldn't be sent. Please try again.",
         variant: "destructive"
       })
+      console.error('Form submission error:', error)
     } finally {
       setIsSubmitting(false)
     }
@@ -81,20 +82,12 @@ export function MessageDialog() {
           </DialogDescription>
         </DialogHeader>
         <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          className="space-y-4"
           onSubmit={handleSubmit}
+          className="space-y-4"
         >
           <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="subject" value="New contact form submission" />
           <input type="hidden" name="to" value="info@thecroquet.com" />
-          <p hidden>
-            <label>
-              Don't fill this out: <input name="bot-field" />
-            </label>
-          </p>
           <div>
             <Input
               placeholder="Your name"

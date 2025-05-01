@@ -18,9 +18,12 @@ const CalendlyIntegration = () => {
         button.addEventListener('click', (e) => {
           e.preventDefault();
           // @ts-ignore
-          window.Calendly?.initPopupWidget({
-            url: 'https://calendly.com/james-thecroquet/30min'
-          });
+          if (window.Calendly) {
+            window.Calendly.initPopupWidget({
+              url: 'https://calendly.com/james-thecroquet/30min'
+            });
+            return false;
+          }
         });
       });
     };
@@ -30,15 +33,21 @@ const CalendlyIntegration = () => {
       handleCalendlyLoad();
     } else {
       // Otherwise wait for script to load
-      const checkCalendlyInterval = setInterval(() => {
-        if (window.Calendly) {
-          handleCalendlyLoad();
-          clearInterval(checkCalendlyInterval);
-        }
-      }, 100);
-      
-      // Clear interval if it hasn't loaded after 10 seconds
-      setTimeout(() => clearInterval(checkCalendlyInterval), 10000);
+      const script = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
+      if (script) {
+        script.addEventListener('load', handleCalendlyLoad);
+      } else {
+        // Check periodically for Calendly to be loaded
+        const checkCalendlyInterval = setInterval(() => {
+          if (window.Calendly) {
+            handleCalendlyLoad();
+            clearInterval(checkCalendlyInterval);
+          }
+        }, 100);
+        
+        // Clear interval if it hasn't loaded after 10 seconds
+        setTimeout(() => clearInterval(checkCalendlyInterval), 10000);
+      }
     }
 
     // Clean up event listeners
