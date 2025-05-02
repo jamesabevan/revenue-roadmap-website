@@ -1,7 +1,6 @@
 
 import { Mail, MessageSquare, Phone } from "lucide-react";
 import ContactForm from "./ContactForm";
-import { ScheduleConsultationButton } from "@/components/ScheduleConsultationButton";
 
 const ContactSection = () => {
   return (
@@ -47,10 +46,6 @@ const ContactSection = () => {
 
           <div className="bg-gray-50 rounded-lg p-8 shadow-sm">
             <ContactForm />
-          </div>
-
-          <div className="mt-16 text-center">
-            <ScheduleConsultationButton />
           </div>
         </div>
       </div>

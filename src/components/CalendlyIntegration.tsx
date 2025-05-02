@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 
 const CALENDLY_URL = 'https://calendly.com/james-thecroquet';
@@ -17,17 +18,22 @@ const CalendlyIntegration = () => {
       e.preventDefault();
       if (window.Calendly) {
         window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+        return false;
       }
     };
 
     loadCalendlyScript();
 
-    const buttons = document.querySelectorAll('.calendly-open-button');
-    buttons.forEach((button) => {
-      button.addEventListener('click', handleButtonClick);
-    });
+    // Add event listener after a short delay to ensure DOM elements are ready
+    setTimeout(() => {
+      const buttons = document.querySelectorAll('.calendly-open-button');
+      buttons.forEach((button) => {
+        button.addEventListener('click', handleButtonClick);
+      });
+    }, 500);
 
     return () => {
+      const buttons = document.querySelectorAll('.calendly-open-button');
       buttons.forEach((button) => {
         button.removeEventListener('click', handleButtonClick);
       });
