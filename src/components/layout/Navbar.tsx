@@ -3,8 +3,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import { Menu } from "lucide-react";
+import { Menu, Mail } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { NewsletterSignupButton } from "@/components/NewsletterSignupButton";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -99,8 +100,13 @@ const Navbar = () => {
           )}
         </div>
         
-        <div className="hidden md:block">
-          <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
+        <div className="hidden md:flex gap-4">
+          <NewsletterSignupButton 
+            variant="outline"
+            className="border-purple-500 text-purple-700 hover:bg-purple-50"
+            size="default"
+          />
+          <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 calendly-open-button">
             Schedule Consultation
           </Button>
         </div>
@@ -152,9 +158,15 @@ const Navbar = () => {
                     </a>
                   )
                 )}
-                <Button className="mt-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
-                  Schedule Consultation
-                </Button>
+                <div className="flex flex-col gap-3">
+                  <Button className="mt-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 calendly-open-button">
+                    Schedule Consultation
+                  </Button>
+                  <NewsletterSignupButton 
+                    variant="outline"
+                    className="border-purple-500 text-purple-700 hover:bg-purple-50"
+                  />
+                </div>
               </div>
             </SheetContent>
           </Sheet>
