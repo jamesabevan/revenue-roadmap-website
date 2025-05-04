@@ -1,5 +1,8 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
+
 const CtaSection = () => {
   const handleNewsletterScroll = () => {
     const element = document.getElementById("newsletter");
@@ -18,10 +21,12 @@ const CtaSection = () => {
             accelerate growth and optimize your sales operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="gap-2 bg-white text-purple-600 hover:bg-gray-100 calendly-open-button">
-              Schedule Consultation <ArrowRight className="h-4 w-4" />
+            <Button size="lg" variant="secondary" className="gap-2 bg-white text-purple-600 hover:bg-gray-100" asChild>
+              <Link to="/free-consultation">
+                Schedule Consultation <ArrowRight className="h-4 w-4" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" onClick={handleNewsletterScroll} className="border-white text-purple-700 bg-slate-50">
+            <Button size="lg" variant="outline" onClick={handleNewsletterScroll} className="border-white text-white hover:text-white hover:bg-purple-700 bg-transparent">
               <Mail className="mr-2 h-4 w-4" /> Join Newsletter
             </Button>
           </div>

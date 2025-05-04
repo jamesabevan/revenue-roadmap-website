@@ -1,9 +1,11 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Menu, Mail } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -113,8 +115,8 @@ const Navbar = () => {
           <Button variant="outline" onClick={handleNewsletterScroll} className="border-purple-500 text-purple-700 hover:text-purple-700">
             <Mail className="mr-2 h-4 w-4" /> Join Newsletter
           </Button>
-          <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 calendly-open-button">
-            Schedule Consultation
+          <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600" asChild>
+            <Link to="/free-consultation">Schedule Consultation</Link>
           </Button>
         </div>
         
@@ -148,8 +150,8 @@ const Navbar = () => {
                       {item.name}
                     </a>)}
                 <div className="flex flex-col gap-3">
-                  <Button className="mt-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 calendly-open-button">
-                    Schedule Consultation
+                  <Button className="mt-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600" asChild onClick={() => setIsOpen(false)}>
+                    <Link to="/free-consultation">Schedule Consultation</Link>
                   </Button>
                   <Button variant="outline" className="border-purple-500 text-purple-700 hover:bg-purple-50 w-full" onClick={handleNewsletterScroll}>
                     <Mail className="mr-2 h-4 w-4" /> Join Newsletter
