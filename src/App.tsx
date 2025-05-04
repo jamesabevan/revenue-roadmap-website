@@ -14,6 +14,7 @@ import FractionalCROPage from "./pages/services/FractionalCROPage";
 import GoToMarketPage from "./pages/services/GoToMarketPage";
 import About from "./pages/About";
 import FreeConsultation from "./pages/FreeConsultation";
+import Newsletter from "./pages/Newsletter";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/free-consultation" element={<FreeConsultation />} />
+          <Route path="/newsletter" element={<Newsletter />} />
           <Route path="/services/revenue-strategy" element={<RevenueStrategyPage />} />
           <Route path="/services/sales-process" element={<SalesProcessPage />} />
           <Route path="/services/sales-team" element={<SalesTeamPage />} />
