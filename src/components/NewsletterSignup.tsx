@@ -40,10 +40,10 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ className, onSucces
     setIsSubmitting(true);
     
     try {
-      // Using the same EmailJS service as the contact form
-      const serviceId = "service_12345"; // Replace with your actual EmailJS service ID
-      const templateId = "template_12345"; // Replace with your actual EmailJS template ID
-      const userId = "user_12345"; // Replace with your actual EmailJS user ID
+      // Using the provided EmailJS credentials
+      const serviceId = "service_ua59v3k";
+      const templateId = "template_8jjku2a";
+      const publicKey = "zYGFhwysoY0ZY9a5H";
 
       const templateParams = {
         from_name: values.fullName,
@@ -52,7 +52,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ className, onSucces
         message: "Newsletter Signup"
       };
 
-      await emailjs.send(serviceId, templateId, templateParams, userId);
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
       
       // Show success state
       setIsSuccess(true);
