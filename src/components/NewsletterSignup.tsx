@@ -40,10 +40,10 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ className, onSucces
     setIsSubmitting(true);
     
     try {
-      // Replace these with your actual EmailJS credentials
-      const serviceId = "YOUR_SERVICE_ID"; // User will provide this
-      const templateId = "YOUR_TEMPLATE_ID"; // User will provide this
-      const userId = "YOUR_USER_ID"; // User will provide this
+      // Using the same EmailJS service as the contact form
+      const serviceId = "service_12345"; // Replace with your actual EmailJS service ID
+      const templateId = "template_12345"; // Replace with your actual EmailJS template ID
+      const userId = "user_12345"; // Replace with your actual EmailJS user ID
 
       const templateParams = {
         from_name: values.fullName,

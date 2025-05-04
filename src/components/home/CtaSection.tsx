@@ -1,9 +1,13 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import NewsletterSignupModal from "@/components/NewsletterSignupModal";
+import { ArrowRight, Mail } from "lucide-react";
 
 const CtaSection = () => {
+  const handleNewsletterScroll = () => {
+    const element = document.getElementById("newsletter");
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-500 text-white">
       <div className="container mx-auto px-4">
@@ -19,9 +23,14 @@ const CtaSection = () => {
             <Button size="lg" variant="secondary" className="gap-2 bg-white text-purple-600 hover:bg-gray-100 calendly-open-button">
               Schedule Consultation <ArrowRight className="h-4 w-4" />
             </Button>
-            <NewsletterSignupModal 
+            <Button 
+              size="lg" 
+              variant="outline" 
               className="border-white text-white hover:bg-white/10"
-            />
+              onClick={handleNewsletterScroll}
+            >
+              <Mail className="mr-2 h-4 w-4" /> Join Newsletter
+            </Button>
           </div>
         </div>
       </div>
