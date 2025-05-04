@@ -1,56 +1,69 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Menu, Mail } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-
-  const services = [
-    { name: "Revenue Strategy", href: "/services/revenue-strategy" },
-    { name: "Sales Process", href: "/services/sales-process" },
-    { name: "Sales Team", href: "/services/sales-team" },
-    { name: "Revenue Operations", href: "/services/revenue-operations" },
-    { name: "Fractional CRO", href: "/services/fractional-cro" },
-    { name: "Go-to-Market", href: "/services/go-to-market" }
-  ];
-
+  const services = [{
+    name: "Revenue Strategy",
+    href: "/services/revenue-strategy"
+  }, {
+    name: "Sales Process",
+    href: "/services/sales-process"
+  }, {
+    name: "Sales Team",
+    href: "/services/sales-team"
+  }, {
+    name: "Revenue Operations",
+    href: "/services/revenue-operations"
+  }, {
+    name: "Fractional CRO",
+    href: "/services/fractional-cro"
+  }, {
+    name: "Go-to-Market",
+    href: "/services/go-to-market"
+  }];
   const handleNavigation = (path: string) => {
     const isSection = path.startsWith("#");
     if (isSection && !window.location.pathname.includes(path)) {
       navigate("/");
       setTimeout(() => {
         const element = document.getElementById(path.substring(1));
-        element?.scrollIntoView({ behavior: "smooth" });
+        element?.scrollIntoView({
+          behavior: "smooth"
+        });
       }, 100);
     } else if (isSection) {
       const element = document.getElementById(path.substring(1));
-      element?.scrollIntoView({ behavior: "smooth" });
+      element?.scrollIntoView({
+        behavior: "smooth"
+      });
     } else {
       navigate(path);
     }
   };
-
   const handleNewsletterScroll = () => {
     // Navigate to homepage if not already there
     if (window.location.pathname !== "/") {
       navigate("/");
       setTimeout(() => {
         const element = document.getElementById("newsletter");
-        element?.scrollIntoView({ behavior: "smooth" });
+        element?.scrollIntoView({
+          behavior: "smooth"
+        });
       }, 100);
     } else {
       // If already on homepage, just scroll
       const element = document.getElementById("newsletter");
-      element?.scrollIntoView({ behavior: "smooth" });
+      element?.scrollIntoView({
+        behavior: "smooth"
+      });
     }
     setIsOpen(false);
   };
-
   const navItems = [{
     name: "Home",
     href: "/"
@@ -68,9 +81,7 @@ const Navbar = () => {
     name: "Contact",
     href: "#contact"
   }];
-
-  return (
-    <nav className="py-4 border-b-[0.5px] border-gray-100 bg-transparent backdrop-blur-md sticky top-0 z-30">
+  return <nav className="py-4 border-b-[0.5px] border-gray-100 bg-transparent backdrop-blur-md sticky top-0 z-30">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="/" className="flex items-center">
           <img alt="CROquet Logo" src="/lovable-uploads/f43c7108-e965-4ce0-86a3-594bd4da207d.png" className="h-32 -my-6 object-contain" />
@@ -78,9 +89,7 @@ const Navbar = () => {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-8 items-center">
-          {navItems.map(item => 
-            item.hasDropdown ? (
-              <NavigationMenu key={item.name}>
+          {navItems.map(item => item.hasDropdown ? <NavigationMenu key={item.name}>
                 <NavigationMenuList>
                   <NavigationMenuItem>
                     <NavigationMenuTrigger className="text-gray-800 hover:text-purple-600 transition-colors font-medium bg-transparent">
@@ -88,39 +97,20 @@ const Navbar = () => {
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <div className="grid w-[400px] gap-3 p-4 bg-white">
-                        {services.map((service) => (
-                          <a
-                            key={service.name}
-                            href={service.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-50"
-                            onClick={() => setIsOpen(false)}
-                          >
+                        {services.map(service => <a key={service.name} href={service.href} className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-50" onClick={() => setIsOpen(false)}>
                             <div className="text-sm font-medium leading-none text-gray-800">{service.name}</div>
-                          </a>
-                        ))}
+                          </a>)}
                       </div>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
                 </NavigationMenuList>
-              </NavigationMenu>
-            ) : (
-              <button
-                key={item.name}
-                onClick={() => handleNavigation(item.href)}
-                className="text-gray-800 hover:text-purple-600 transition-colors font-medium"
-              >
+              </NavigationMenu> : <button key={item.name} onClick={() => handleNavigation(item.href)} className="text-gray-800 hover:text-purple-600 transition-colors font-medium">
                 {item.name}
-              </button>
-            )
-          )}
+              </button>)}
         </div>
         
         <div className="hidden md:flex gap-4">
-          <Button
-            variant="outline"
-            className="border-purple-500 text-purple-700 hover:bg-purple-50"
-            onClick={handleNewsletterScroll}
-          >
+          <Button variant="outline" onClick={handleNewsletterScroll} className="border-purple-500 text-purple-700 hover:text-purple-700">
             <Mail className="mr-2 h-4 w-4" /> Join Newsletter
           </Button>
           <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 calendly-open-button">
@@ -147,43 +137,21 @@ const Navbar = () => {
                 </SheetDescription>
               </SheetHeader>
               <div className="flex flex-col gap-4 mt-8">
-                {navItems.map(item => 
-                  item.hasDropdown ? (
-                    <div key={item.name} className="space-y-2">
+                {navItems.map(item => item.hasDropdown ? <div key={item.name} className="space-y-2">
                       <div className="font-medium text-gray-800">{item.name}</div>
                       <div className="pl-4 space-y-2">
-                        {services.map(service => (
-                          <a
-                            key={service.name}
-                            href={service.href}
-                            className="block text-gray-800 hover:text-purple-600 py-1 transition-colors"
-                            onClick={() => setIsOpen(false)}
-                          >
+                        {services.map(service => <a key={service.name} href={service.href} className="block text-gray-800 hover:text-purple-600 py-1 transition-colors" onClick={() => setIsOpen(false)}>
                             {service.name}
-                          </a>
-                        ))}
+                          </a>)}
                       </div>
-                    </div>
-                  ) : (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="text-gray-800 hover:text-purple-600 py-2 transition-colors font-medium"
-                      onClick={() => setIsOpen(false)}
-                    >
+                    </div> : <a key={item.name} href={item.href} className="text-gray-800 hover:text-purple-600 py-2 transition-colors font-medium" onClick={() => setIsOpen(false)}>
                       {item.name}
-                    </a>
-                  )
-                )}
+                    </a>)}
                 <div className="flex flex-col gap-3">
                   <Button className="mt-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 calendly-open-button">
                     Schedule Consultation
                   </Button>
-                  <Button 
-                    variant="outline"
-                    className="border-purple-500 text-purple-700 hover:bg-purple-50 w-full"
-                    onClick={handleNewsletterScroll}
-                  >
+                  <Button variant="outline" className="border-purple-500 text-purple-700 hover:bg-purple-50 w-full" onClick={handleNewsletterScroll}>
                     <Mail className="mr-2 h-4 w-4" /> Join Newsletter
                   </Button>
                 </div>
@@ -192,8 +160,6 @@ const Navbar = () => {
           </Sheet>
         </div>
       </div>
-    </nav>
-  );
+    </nav>;
 };
-
 export default Navbar;
