@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTr
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Menu } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import NewsletterSignupModal from "@/components/NewsletterSignupModal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -100,6 +101,9 @@ const Navbar = () => {
         </div>
         
         <div className="hidden md:flex gap-4">
+          <NewsletterSignupModal 
+            className="border-purple-500 text-purple-700 hover:bg-purple-50"
+          />
           <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 calendly-open-button">
             Schedule Consultation
           </Button>
@@ -156,6 +160,9 @@ const Navbar = () => {
                   <Button className="mt-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 calendly-open-button">
                     Schedule Consultation
                   </Button>
+                  <NewsletterSignupModal 
+                    className="border-purple-500 text-purple-700 hover:bg-purple-50 w-full"
+                  />
                 </div>
               </div>
             </SheetContent>
