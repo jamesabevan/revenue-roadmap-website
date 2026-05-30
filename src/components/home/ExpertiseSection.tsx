@@ -1,54 +1,151 @@
+const stages = [
+  {
+    label: 'Stage 01',
+    range: '£0 → £100K ARR',
+    role: 'Co-founder & CRO',
+    company: 'Solcoro',
+    description:
+      'Built the first revenue motion from zero. ICP definition, initial positioning, first hires, first pipeline, first close. What it actually feels like to create something from nothing — and what breaks when you try to scale it.',
+    insight: 'I know what a founder asks a fractional CRO to do. Because I\'ve been both.',
+  },
+  {
+    label: 'Stage 02',
+    range: '£30M → £50M',
+    role: 'National Sales Manager & Acting Head of Sales',
+    company: 'Mölnlycke Healthcare',
+    description:
+      'P&L responsibility for a £35M business across UK/Ireland & Benelux, leading a 25-person team. The first scaling inflection: building process, structure, and incentive architecture that works at genuine team scale.',
+    insight: 'The point where founder-led sales motion breaks and professional revenue infrastructure has to replace it.',
+  },
+  {
+    label: 'Stage 03',
+    range: '£160M → £225M',
+    role: 'Global Head of Sales & Business Development',
+    company: 'Adaptavist',
+    description:
+      'Full P&L ownership, 106-person global team across NAMER, EMEA, and APAC. Built a new RevOps function, led a global CRM migration, restructured the entire go-to-market organisation. Revenue at scale requires infrastructure that most growing companies haven\'t built yet.',
+    insight: 'What good looks like at the stage above where most of my clients are trying to get to.',
+  },
+];
 
-import { Badge } from "@/components/ui/badge";
-import { CheckCircle2 } from "lucide-react";
-const industries = ["SaaS", "Technology", "Professional Services", "Financial Services", "Manufacturing", "Healthcare", "B2B Services", "Cybersecurity"];
-const expertiseAreas = [{
-  title: "Sales Strategy & Process Design",
-  points: ["Sales methodology development", "Pipeline management frameworks", "Territory design & optimization", "Account-based selling strategies", "Sales playbook creation"]
-}, {
-  title: "Revenue Organization Structure",
-  points: ["CRO office establishment", "Sales team structure optimization", "Revenue operations implementation", "Cross-functional alignment", "Compensation plan design"]
-}, {
-  title: "Growth & Scaling",
-  points: ["Go-to-market strategy", "New market entry planning", "Channel strategy development", "International expansion", "Growth roadmap creation"]
-}];
 const ExpertiseSection = () => {
-  return <section id="expertise" className="py-12 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-6">
-              Deep Expertise Across B2B Industries
-            </h2>
-            <p className="text-lg text-navy-700 mb-8">With over 10+ years of experience driving revenue growth and sales transformation, we bring industry-specific insights to help you achieve exceptional results.</p>
-            
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold text-navy-800 mb-4">Industries We Serve</h3>
-              <div className="flex flex-wrap gap-3">
-                {industries.map((industry, index) => <Badge key={index} variant="outline" className="bg-white text-navy-700 py-1 px-3">
-                    {industry}
-                  </Badge>)}
+  return (
+    <section
+      id="range"
+      className="py-20 md:py-28"
+      style={{ backgroundColor: 'var(--bg-surface)' }}
+    >
+      <div className="max-w-6xl mx-auto px-6">
+
+        {/* Header */}
+        <div className="flex items-center gap-3 mb-4">
+          <div className="h-px w-8" style={{ backgroundColor: 'var(--gold)' }} />
+          <span
+            className="text-xs font-body uppercase tracking-widest"
+            style={{ color: 'var(--gold)', letterSpacing: '0.15em' }}
+          >
+            The Range
+          </span>
+        </div>
+
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-4">
+          <h2
+            className="font-display leading-tight"
+            style={{
+              fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
+              color: 'var(--text-primary)',
+              fontWeight: 500,
+              maxWidth: '32rem',
+            }}
+          >
+            I've operated at every stage
+            <br />
+            <span style={{ color: 'var(--text-secondary)' }}>
+              you're trying to navigate.
+            </span>
+          </h2>
+        </div>
+
+        <p
+          className="font-body text-base leading-relaxed mb-16 max-w-2xl"
+          style={{ color: 'var(--text-secondary)' }}
+        >
+          Most advisors have operated at one revenue scale. The ability to see what's coming —
+          because I've already been there — is the difference between strategic advice
+          and lived experience.
+        </p>
+
+        {/* Stage cards */}
+        <div className="space-y-px" style={{ backgroundColor: 'var(--border)' }}>
+          {stages.map((stage) => (
+            <div
+              key={stage.label}
+              className="p-8 md:p-10"
+              style={{ backgroundColor: 'var(--bg-card)' }}
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                {/* Left — numbers */}
+                <div>
+                  <div
+                    className="text-xs font-body uppercase tracking-widest mb-2"
+                    style={{ color: 'var(--text-muted)', letterSpacing: '0.12em' }}
+                  >
+                    {stage.label}
+                  </div>
+                  <div
+                    className="font-mono font-medium mb-4"
+                    style={{
+                      color: 'var(--gold)',
+                      fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)',
+                      fontFamily: "'JetBrains Mono', monospace",
+                    }}
+                  >
+                    {stage.range}
+                  </div>
+                  <div className="mb-1">
+                    <span
+                      className="font-body text-sm"
+                      style={{ color: 'var(--text-primary)' }}
+                    >
+                      {stage.role}
+                    </span>
+                  </div>
+                  <div
+                    className="font-body text-sm"
+                    style={{ color: 'var(--text-secondary)' }}
+                  >
+                    {stage.company}
+                  </div>
+                </div>
+
+                {/* Middle — description */}
+                <div className="lg:col-span-2">
+                  <p
+                    className="font-body text-sm leading-relaxed mb-6"
+                    style={{ color: 'var(--text-secondary)' }}
+                  >
+                    {stage.description}
+                  </p>
+                  <div
+                    className="font-display text-base italic pl-4"
+                    style={{
+                      color: 'var(--text-primary)',
+                      borderLeft: '2px solid var(--gold)',
+                    }}
+                  >
+                    "{stage.insight}"
+                  </div>
+                </div>
+
               </div>
             </div>
-          </div>
-          
-          <div className="space-y-8">
-            {expertiseAreas.map((area, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold text-navy-800 mb-4">{area.title}</h3>
-                <ul className="space-y-2">
-                  {area.points.map((point, pointIndex) => (
-                    <li key={pointIndex} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-yellow-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-navy-700">{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
+
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ExpertiseSection;

@@ -1,84 +1,141 @@
-
-import { Button } from "@/components/ui/button";
-import { ChevronRight, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
+const stats = [
+  { value: '£225M', label: 'Peak revenue responsibility' },
+  { value: '106', label: 'Person global team led' },
+  { value: '3', label: 'Distinct growth stages operated across' },
+];
 
 const HeroSection = () => {
-  const scrollToServices = () => {
-    const servicesSection = document.getElementById('services');
-    servicesSection?.scrollIntoView({
-      behavior: 'smooth'
-    });
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
-  return <section className="py-20 bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="w-full md:w-1/2 space-y-6">
-            <div className="inline-flex items-center rounded-full bg-purple-100 px-3 py-1 text-sm text-purple-600 font-medium">
-              <TrendingUp className="h-4 w-4 mr-1" /> 
-              Transform Your Revenue Strategy
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Revenue, <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Reimagined.</span>
-            </h1>
-            <p className="text-lg text-gray-700 max-w-xl">
-              Expert revenue optimization services to drive strategic growth, streamline sales processes, and build sustainable business performance.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="rounded-md bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600" asChild>
-                <Link to="/free-consultation">
-                  Schedule Consultation <ChevronRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-md border border-purple-500 text-purple-700 hover:bg-purple-50 hover:text-purple-700" onClick={scrollToServices}>
-                Our Services
-              </Button>
-            </div>
-            <div className="pt-6">
-              <p className="text-sm text-gray-500">Trusted by industry leaders across healthcare, medical devices, tech, SaaS, and professional services</p>
-              <div className="flex flex-wrap items-center gap-8 mt-4">
-                {/* Company Logos - Placeholder gray boxes */}
-                
-                
-                
-                
-              </div>
-            </div>
-          </div>
-          
-          <div className="w-full md:w-1/2 relative">
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden p-8 border border-gray-100 relative z-10">
-              <div className="aspect-video bg-gradient-to-br from-yellow-200 to-pink-200 rounded-lg mb-6 flex items-center justify-center">
-                <img alt="Business Growth Graph" className="w-full h-full object-cover" src="/lovable-uploads/2ee15c94-c416-4501-8e61-e246bdbf5574.png" />
-              </div>
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="h-12 w-12 rounded-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
-                    <TrendingUp className="h-6 w-6 text-purple-500" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 text-left">Design. Align. Grow</h3>
-                    <p className="text-sm text-gray-600">Strategic Revenue Planning That Drives Results</p>
-                  </div>
-                </div>
-                <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
-                  <div className="h-full w-3/4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="font-medium text-gray-700">Your Roadmap Starts Here</span>
-                  
-                </div>
-              </div>
 
-              
-            </div>
-            
-            {/* Background decorative elements */}
-            <div className="absolute -z-10 top-1/2 -translate-y-1/2 -right-6 h-80 w-80 bg-yellow-100 rounded-full"></div>
-            <div className="absolute -z-10 -bottom-10 -left-10 h-60 w-60 bg-pink-100 rounded-full"></div>
+  const scrollToServices = () => {
+    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <section
+      className="relative py-24 md:py-36"
+      style={{ backgroundColor: 'var(--bg-primary)' }}
+    >
+      {/* Subtle background grid */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, var(--border) 1px, transparent 0)`,
+          backgroundSize: '48px 48px',
+          opacity: 0.4,
+        }}
+      />
+
+      <div className="relative max-w-6xl mx-auto px-6">
+        <div className="max-w-4xl">
+
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3 mb-8">
+            <div
+              className="h-px w-12"
+              style={{ backgroundColor: 'var(--gold)' }}
+            />
+            <span
+              className="text-xs font-body uppercase tracking-widest"
+              style={{ color: 'var(--gold)', letterSpacing: '0.15em' }}
+            >
+              Fractional CRO
+            </span>
           </div>
+
+          {/* Headline */}
+          <h1
+            className="font-display leading-tight mb-8"
+            style={{
+              fontSize: 'clamp(2.5rem, 6vw, 5rem)',
+              color: 'var(--text-primary)',
+              fontWeight: 500,
+            }}
+          >
+            Your revenue motion worked.
+            <br />
+            <span style={{ color: 'var(--text-secondary)' }}>
+              Then you scaled.
+            </span>
+          </h1>
+
+          {/* Subheadline */}
+          <p
+            className="font-body text-lg md:text-xl leading-relaxed mb-10 max-w-2xl"
+            style={{ color: 'var(--text-secondary)' }}
+          >
+            I work with post-Series B B2B SaaS and PE-backed technology businesses
+            to diagnose and fix the revenue infrastructure problems that emerge
+            between £5M and £50M ARR — before the board starts asking questions
+            nobody can answer.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-20">
+            <button
+              onClick={scrollToContact}
+              className="px-7 py-3.5 text-sm font-body font-medium transition-all"
+              style={{
+                backgroundColor: 'var(--gold)',
+                color: '#0B0D14',
+                borderRadius: '4px',
+              }}
+              onMouseEnter={e => (e.currentTarget.style.backgroundColor = 'var(--gold-light)')}
+              onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'var(--gold)')}
+            >
+              Book a conversation
+            </button>
+            <button
+              onClick={scrollToServices}
+              className="px-7 py-3.5 text-sm font-body font-medium transition-all"
+              style={{
+                backgroundColor: 'transparent',
+                color: 'var(--text-secondary)',
+                border: '1px solid var(--border-light)',
+                borderRadius: '4px',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.color = 'var(--text-primary)';
+                e.currentTarget.style.borderColor = 'var(--text-muted)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.color = 'var(--text-secondary)';
+                e.currentTarget.style.borderColor = 'var(--border-light)';
+              }}
+            >
+              See how I work
+            </button>
+          </div>
+
+          {/* Stats bar */}
+          <div
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-10"
+            style={{ borderTop: '1px solid var(--border)' }}
+          >
+            {stats.map((stat) => (
+              <div key={stat.value}>
+                <div
+                  className="font-mono text-3xl md:text-4xl font-medium mb-1"
+                  style={{ color: 'var(--gold)', fontFamily: "'JetBrains Mono', monospace" }}
+                >
+                  {stat.value}
+                </div>
+                <div
+                  className="text-xs font-body uppercase tracking-wide"
+                  style={{ color: 'var(--text-muted)', letterSpacing: '0.08em' }}
+                >
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;

@@ -1,85 +1,110 @@
-import { Mail, MapPin, Phone } from "lucide-react";
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-  return <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-gray-800">
-          <div>
-            <div className="mb-2">
-              <img alt="CROquet Logo" src="/lovable-uploads/643bc363-4d1c-4e7e-b21a-8c25e54abe92.png" className="h-20" />
+  const year = new Date().getFullYear();
+
+  return (
+    <footer
+      className="py-12"
+      style={{ borderTop: '1px solid var(--border)' }}
+    >
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-10">
+
+          <div className="max-w-xs">
+            <div className="mb-3">
+              <span className="font-display text-lg font-semibold" style={{ color: 'var(--text-primary)' }}>
+                James Bevan
+              </span>
+              <div className="text-xs tracking-widest uppercase mt-0.5 font-body" style={{ color: 'var(--gold)', letterSpacing: '0.12em' }}>
+                Fractional CRO
+              </div>
             </div>
-            <p className="text-gray-300 mb-4">
-              Strategic revenue growth consulting for B2B companies looking to scale their sales operations and maximize profitability.
+            <p className="text-sm font-body leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+              Senior revenue leadership for post-Series B B2B SaaS and PE-backed technology businesses.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/company/thecroquet" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-purple-400 transition-colors">
-                <span className="sr-only">LinkedIn</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
-              </a>
+            <a
+              href="https://www.linkedin.com/in/james-a-bevan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-4 text-sm font-body transition-colors"
+              style={{ color: 'var(--text-muted)' }}
+              onMouseEnter={e => (e.currentTarget.style.color = 'var(--gold)')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}
+            >
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+
+          <div className="grid grid-cols-2 gap-12">
+            <div>
+              <p className="text-xs font-body uppercase tracking-widest mb-4" style={{ color: 'var(--text-muted)', letterSpacing: '0.12em' }}>
+                Navigation
+              </p>
+              <ul className="space-y-3">
+                {[
+                  { label: 'How I Work', href: '/#services' },
+                  { label: 'The Range', href: '/#range' },
+                  { label: 'Case Studies', href: '/#case-studies' },
+                  { label: 'About', href: '/about' },
+                ].map(link => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      className="text-sm font-body transition-colors"
+                      style={{ color: 'var(--text-secondary)' }}
+                      onMouseEnter={e => (e.currentTarget.style.color = 'var(--text-primary)')}
+                      onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-secondary)')}
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <p className="text-xs font-body uppercase tracking-widest mb-4" style={{ color: 'var(--text-muted)', letterSpacing: '0.12em' }}>
+                Contact
+              </p>
+              <ul className="space-y-3">
+                <li>
+                  <a
+                    href="mailto:james@thecroquet.com"
+                    className="text-sm font-body transition-colors"
+                    style={{ color: 'var(--text-secondary)' }}
+                    onMouseEnter={e => (e.currentTarget.style.color = 'var(--text-primary)')}
+                    onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-secondary)')}
+                  >
+                    james@thecroquet.com
+                  </a>
+                </li>
+                <li>
+                  <span className="text-sm font-body" style={{ color: 'var(--text-secondary)' }}>
+                    Cardiff, UK
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
-          
-          <div>
-            <h4 className="text-lg font-medium mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="/#services" className="text-gray-300 hover:text-purple-400 transition-colors">
-                  Our Services
-                </a>
-              </li>
-              <li>
-                <a href="/free-consultation" className="text-gray-300 hover:text-purple-400 transition-colors">
-                  Free Consultation
-                </a>
-              </li>
-              <li>
-                <a href="/newsletter" className="text-gray-300 hover:text-purple-400 transition-colors">
-                  Join Newsletter
-                </a>
-              </li>
-              <li>
-                <a href="/#expertise" className="text-gray-300 hover:text-purple-400 transition-colors">
-                  Expertise
-                </a>
-              </li>
-              <li>
-                <a href="/#projects" className="text-gray-300 hover:text-purple-400 transition-colors">
-                  Our Projects
-                </a>
-              </li>
-              <li>
-                <a href="/#contact" className="text-gray-300 hover:text-purple-400 transition-colors">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-medium mb-4">Contact Information</h4>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 mr-2 text-purple-400 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300">Cardiff, UK</span>
-              </li>
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 mr-2 text-purple-400 flex-shrink-0" />
-                <a href="tel:02922523408" className="text-gray-300 hover:text-purple-400 transition-colors">029 2252 3408</a>
-              </li>
-              <li className="flex items-center">
-                <Mail className="h-5 w-5 mr-2 text-purple-400 flex-shrink-0" />
-                <a href="mailto:info@thecroquet.com" className="text-gray-300 hover:text-purple-400 transition-colors">info@thecroquet.com</a>
-              </li>
-            </ul>
-          </div>
+
         </div>
-        
-        <div className="pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {currentYear} CROquet. All rights reserved.</p>
+
+        <div
+          className="mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+          style={{ borderTop: '1px solid var(--border)' }}
+        >
+          <p className="text-xs font-body" style={{ color: 'var(--text-muted)' }}>
+            © {year} James Bevan. All rights reserved.
+          </p>
+          <p className="text-xs font-body" style={{ color: 'var(--text-muted)' }}>
+            thecroquet.com
+          </p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

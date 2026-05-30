@@ -1,23 +1,22 @@
-
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/home/HeroSection";
+import ProblemSection from "@/components/home/ProblemSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import ExpertiseSection from "@/components/home/ExpertiseSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
-import ContactSection from "@/components/home/ContactSection";
 import CtaSection from "@/components/home/CtaSection";
-import NewsletterSection from "@/components/home/NewsletterSection";
+import ContactSection from "@/components/home/ContactSection";
 
 const Index = () => {
   return (
     <Layout>
       <HeroSection />
+      <ProblemSection />
       <ServicesSection />
       <ExpertiseSection />
       <TestimonialsSection />
-      <NewsletterSection />
-      <ContactSection />
       <CtaSection />
+      <ContactSection />
     </Layout>
   );
 };
