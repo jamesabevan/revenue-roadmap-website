@@ -14,6 +14,11 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
+    // Netlify drops unknown fields — fold revenue into message so it's always captured
+    const revenue = data.get('revenue')?.toString().trim();
+    const message = data.get('message')?.toString().trim();
+    data.set('message', revenue ? `Revenue (prev. 12 months): ${revenue}\n\n${message}` : message ?? '');
+    data.delete('revenue');
     const body = Array.from(data.entries())
       .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v.toString())}`)
       .join('&');
