@@ -18,8 +18,9 @@ const ContactSection = () => {
       name: formData.name,
       company: formData.company,
       email: formData.email,
-      revenue: formData.revenue,
-      message: formData.message,
+      message: formData.revenue
+        ? `Revenue: ${formData.revenue}\n\n${formData.message}`
+        : formData.message,
     }).toString();
     try {
       const res = await fetch('/', {
