@@ -1,10 +1,5 @@
 import { useState } from "react";
 
-const encode = (data: Record<string, string>) =>
-  Object.entries(data)
-    .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
-    .join('&');
-
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -16,13 +11,17 @@ const ContactSection = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const body = Array.from(data.entries())
+      .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v.toString())}`)
+      .join('&');
     try {
       await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'contact', ...formData }),
+        body,
       });
       setSubmitted(true);
     } catch {
