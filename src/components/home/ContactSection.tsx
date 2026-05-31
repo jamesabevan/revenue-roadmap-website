@@ -235,17 +235,17 @@ const ContactSection = () => {
                 <div>
                   <label style={labelStyle}>Current ARR stage</label>
                   <select
-                    name="stage"
+                    name="arr-stage"
                     value={formData.stage}
                     onChange={e => setFormData({ ...formData, stage: e.target.value })}
                     style={{ ...inputStyle, cursor: 'pointer' }}
                   >
                     <option value="">Select range...</option>
-                    <option value="<2m">Under £2M</option>
+                    <option value="under-2m">Under £2M</option>
                     <option value="2-10m">£2M – £10M</option>
                     <option value="10-30m">£10M – £30M</option>
                     <option value="30-100m">£30M – £100M</option>
-                    <option value="100m+">£100M+</option>
+                    <option value="100m-plus">£100M+</option>
                   </select>
                 </div>
 
