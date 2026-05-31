@@ -14,6 +14,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <!-- Hidden form for Netlify build-time detection (React SPA renders the real form) -->
+    <form name="contact" data-netlify="true" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="text" name="name" />
+      <input type="text" name="company" />
+      <input type="email" name="email" />
+      <select name="stage"></select>
+      <textarea name="message"></textarea>
+    </form>
+
     <div id="root"></div>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>

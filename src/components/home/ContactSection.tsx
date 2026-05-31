@@ -1,5 +1,10 @@
 import { useState } from "react";
 
+const encode = (data: Record<string, string>) =>
+  Object.entries(data)
+    .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
+    .join('&');
+
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -9,11 +14,20 @@ const ContactSection = () => {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic here
-    setSubmitted(true);
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'contact', ...formData }),
+      });
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    }
   };
 
   const inputStyle = {
@@ -169,12 +183,22 @@ const ContactSection = () => {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                onSubmit={handleSubmit}
+                className="space-y-5"
+              >
+                {/* Required by Netlify for JS-rendered forms */}
+                <input type="hidden" name="form-name" value="contact" />
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label style={labelStyle}>Name</label>
                     <input
                       type="text"
+                      name="name"
                       required
                       value={formData.name}
                       onChange={e => setFormData({ ...formData, name: e.target.value })}
@@ -186,6 +210,7 @@ const ContactSection = () => {
                     <label style={labelStyle}>Company</label>
                     <input
                       type="text"
+                      name="company"
                       required
                       value={formData.company}
                       onChange={e => setFormData({ ...formData, company: e.target.value })}
@@ -199,6 +224,7 @@ const ContactSection = () => {
                   <label style={labelStyle}>Email</label>
                   <input
                     type="email"
+                    name="email"
                     required
                     value={formData.email}
                     onChange={e => setFormData({ ...formData, email: e.target.value })}
@@ -210,6 +236,7 @@ const ContactSection = () => {
                 <div>
                   <label style={labelStyle}>Current ARR stage</label>
                   <select
+                    name="stage"
                     value={formData.stage}
                     onChange={e => setFormData({ ...formData, stage: e.target.value })}
                     style={{ ...inputStyle, cursor: 'pointer' }}
@@ -226,6 +253,7 @@ const ContactSection = () => {
                 <div>
                   <label style={labelStyle}>What's the revenue problem?</label>
                   <textarea
+                    name="message"
                     required
                     rows={4}
                     value={formData.message}
@@ -234,6 +262,12 @@ const ContactSection = () => {
                     placeholder="Tell me what's happening in your revenue engine..."
                   />
                 </div>
+
+                {error && (
+                  <p className="font-body text-sm" style={{ color: '#e05c5c' }}>
+                    Something went wrong — please try again or email james@thecroquet.com directly.
+                  </p>
+                )}
 
                 <button
                   type="submit"
