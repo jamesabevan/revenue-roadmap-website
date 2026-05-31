@@ -13,17 +13,25 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    const body = Array.from(data.entries())
-      .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v.toString())}`)
-      .join('&');
+    const body = new URLSearchParams({
+      'form-name': 'contact',
+      name: formData.name,
+      company: formData.company,
+      email: formData.email,
+      revenue: formData.revenue,
+      message: formData.message,
+    }).toString();
     try {
-      await fetch('/', {
+      const res = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body,
       });
-      setSubmitted(true);
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
     } catch {
       setError(true);
     }
