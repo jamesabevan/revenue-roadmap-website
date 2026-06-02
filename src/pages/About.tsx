@@ -2,40 +2,40 @@ import Layout from "@/components/layout/Layout";
 
 const credentials = [
   {
-    period: '2022 — Present',
-    role: 'Co-founder & CRO',
-    company: 'Solcoro',
-    detail: 'B2B SaaS startup. Zero to £100K ARR in six months. Full revenue function built from scratch.',
+    period: 'March 2025 — Present',
+    role: 'Founder & Fractional CRO',
+    company: 'CROquet',
+    detail: 'Fractional CRO and commercial consulting practice. Engagements include: Solcoro — fractional CRO (April 2025–present), building the full commercial function from scratch and driving ARR from $0 to $200k+; Hii-Life — GTM redesign ahead of PE investment (June–November 2025); Brulot — GTM playbook, ICP mapping, sales process design, and CRM implementation (May–June 2025 & January 2026).',
   },
   {
-    period: '2022 — 2024',
+    period: 'November 2022 — March 2025',
     role: 'Global Head of Sales & Business Development',
     company: 'Adaptavist',
-    detail: '£225M revenue. 106-person global team across NAMER, EMEA, APAC. Full P&L. Built new RevOps function. Led global CRM migration.',
+    detail: 'Full P&L across ISV licence resale (Atlassian, GitLab, Monday.com), B2B SaaS, and Professional & Managed Services. Revenue grew from £165M (FY22/23) to £225M (FY23/24) to a £260M run rate. Led a global team of 100+ across NAMER, EMEA, and APAC. Built new RevOps function and led HubSpot CRM implementation.',
   },
   {
-    period: '2021 — 2022',
-    role: 'National Sales Manager, UK/Ireland & Benelux',
+    period: 'June 2021 — November 2022',
+    role: 'Head of Sales, UK/Ireland — Gloves & Antiseptics',
     company: 'Mölnlycke Healthcare',
-    detail: '£35M P&L across Gloves & Antiseptics. 25-person team. Also served as Acting Head of Sales for Surgical Solutions UK (£89.5M revenue).',
+    detail: '£35M P&L across Public & Private Healthcare, B2B, and Pharma Clean Room. Led a 15-person sales team. Also served as acting Head of Sales, Surgical Solutions UK (£89.5M revenue, February–June 2021).',
   },
   {
-    period: '2018 — 2021',
-    role: 'Regional Business Manager — Surgical Solutions',
+    period: 'October 2018 — February 2021',
+    role: 'Regional Business Manager — Surgical Solutions, South UK',
     company: 'Mölnlycke Healthcare',
-    detail: 'Direct management of 7 AMs and 2 Clinical Support Managers. £1.4M YoY growth. UK Team of the Year 2019. Global Market of the Year 2019.',
+    detail: 'Regional sales leadership across the South UK surgical portfolio.',
   },
   {
-    period: '2015 — 2018',
-    role: 'Healthcare Partnership Manager & Account Manager',
+    period: 'May 2015 — October 2018',
+    role: 'Healthcare Partnership Manager & Acute Account Manager',
     company: 'Mölnlycke Healthcare',
-    detail: 'C-suite engagement across South West UK. 110%+ quota attainment. Completed iLEAD and GROW leadership programmes.',
+    detail: 'C-suite engagement across Wales & South West UK. Progressed from Acute Account Manager (May 2015) to Healthcare Partnership Manager (July 2017).',
   },
   {
-    period: '2012 — 2015',
+    period: 'March 2012 — May 2015',
     role: 'Territory Business Manager',
     company: 'Crawford Healthcare',
-    detail: 'Wales & South West wound care. Built territory from ground up.',
+    detail: 'Wales wound care territory. Built territory from ground up.',
   },
 ];
 
@@ -76,8 +76,8 @@ const About = () => {
                   className="font-body text-base leading-relaxed"
                   style={{ color: 'var(--text-secondary)' }}
                 >
-                  I've spent 15 years leading revenue organisations — from a 2-person startup
-                  to a 106-person global team generating £225M in annual revenue. Along the way
+                  I've spent 13 years leading revenue organisations — from a 2-person startup
+                  to a 100+ person global team delivering a £260M revenue run rate. Along the way
                   I've operated at every growth stage that matters: the zero-to-one grind,
                   the first real scaling challenge at £30–50M, and the infrastructure complexity
                   of enterprise scale.
@@ -96,11 +96,12 @@ const About = () => {
                   className="font-body text-base leading-relaxed"
                   style={{ color: 'var(--text-secondary)' }}
                 >
-                  I work with post-Series B B2B SaaS and PE-backed technology businesses as
-                  a fractional CRO — diagnosing what's actually broken in the revenue engine,
-                  designing the infrastructure that fixes it, and providing senior leadership
-                  through the transition. Not as a full-time hire. Not as a management consultant.
-                  As a working operator who has done it before.
+                  In early 2025 I launched CROquet, my fractional CRO and commercial consulting
+                  practice. I work with post-Series B B2B SaaS and PE-backed technology businesses
+                  — diagnosing what's actually broken in the revenue engine, designing the
+                  infrastructure that fixes it, and providing senior leadership through the
+                  transition. Not as a full-time hire. Not as a management consultant. As a
+                  working operator who has done it before.
                 </p>
                 <p
                   className="font-body text-base leading-relaxed"
@@ -258,10 +259,10 @@ const About = () => {
                 </p>
                 <div className="space-y-4">
                   {[
-                    { value: '£225M', label: 'Peak revenue responsibility' },
-                    { value: '106', label: 'Global team at peak' },
-                    { value: '15+', label: 'Years in revenue leadership' },
-                    { value: '3', label: 'Countries managed' },
+                    { value: '£260M', label: 'Peak revenue run rate' },
+                    { value: '100+', label: 'Global team at peak' },
+                    { value: '13+', label: 'Years in commercial leadership' },
+                    { value: '3', label: 'Continents managed' },
                   ].map(s => (
                     <div key={s.label} className="flex justify-between items-baseline">
                       <span
