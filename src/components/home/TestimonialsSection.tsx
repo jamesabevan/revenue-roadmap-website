@@ -2,32 +2,32 @@ const caseStudies = [
   {
     company: 'Solcoro',
     type: 'B2B SaaS Startup',
-    role: 'Co-founder & CRO',
-    result: '£0 → £100K ARR',
-    period: '6 months',
+    role: 'Fractional CRO',
+    result: '$0 → $200K+ ARR',
+    period: 'April 2025 — Present',
     description:
-      'Built the entire revenue function from zero — market positioning, ICP definition, outbound motion, pipeline architecture, and first enterprise close. Established the metrics and reporting framework that would underpin the Series A narrative.',
-    tags: ['GTM Strategy', 'Pipeline Build', 'First Revenue'],
+      'Co-founded Solcoro and took full ownership of sales, marketing, and customer success from day one. Defined ICP, established GTM strategy, built sales process and pipeline infrastructure across new market segments. Built customer success function to drive expansion revenue, product feedback loops, and retention.',
+    tags: ['GTM Strategy', 'Pipeline Build', 'Customer Success'],
   },
   {
     company: 'Brulot',
     type: 'Professional Services',
     role: 'Revenue Advisory',
-    result: 'Revenue architecture redesign',
-    period: 'Ongoing',
+    result: 'GTM playbook launched',
+    period: 'May–Jun 2025 & Jan 2026',
     description:
-      'Revenue strategy and positioning work focused on identifying the highest-value client segments and building a repeatable pipeline model. Redefined the ICP, restructured the service offer around measurable outcomes, and built the sales process from scratch.',
-    tags: ['Revenue Strategy', 'ICP Definition', 'Sales Process'],
+      'Drafted and launched a new GTM playbook covering ICP mapping, inbound and outbound lead generation, full sales process design, CRM implementation, and revenue tracking infrastructure.',
+    tags: ['ICP Mapping', 'Sales Process', 'CRM Implementation'],
   },
   {
-    company: 'HiiLife',
+    company: 'Hii-Life',
     type: 'B2B Technology',
     role: 'Revenue Advisory',
-    result: 'GTM foundation built',
-    period: 'Ongoing',
+    result: 'Full GTM redesign',
+    period: 'June–November 2025',
     description:
-      'Go-to-market strategy development for a technology business targeting a new segment. Built the positioning framework, defined the value proposition by buyer persona, designed the outbound motion, and established the initial pipeline and conversion metrics.',
-    tags: ['Go-to-Market', 'Positioning', 'Channel Strategy'],
+      'Engaged by the Managing Director to support a scaling business ahead of PE investment. Delivered a full GTM redesign to sharpen commercial positioning and improve revenue predictability for the investment process.',
+    tags: ['GTM Redesign', 'PE Readiness', 'Revenue Positioning'],
   },
 ];
 
