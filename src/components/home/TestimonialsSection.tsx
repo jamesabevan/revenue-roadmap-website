@@ -21,7 +21,7 @@ const caseStudies = [
   },
   {
     company: 'Hii-Life',
-    type: 'B2B Technology',
+    type: 'AV Systems Integrator',
     role: 'Revenue Advisory',
     result: 'Full GTM redesign',
     period: 'June–November 2025',
