@@ -11,13 +11,13 @@ const credentials = [
     period: 'November 2022 — March 2025',
     role: 'Global Head of Sales & Business Development',
     company: 'Adaptavist',
-    detail: 'Full P&L across ISV licence resale (Atlassian, GitLab, Monday.com), B2B SaaS, and Professional & Managed Services. Revenue grew from £165M (FY22/23) to £225M (FY23/24) to a £260M run rate. Led a global team of 100+ across NAMER, EMEA, and APAC. Built new RevOps function and led HubSpot CRM implementation.',
+    detail: 'Full P&L across ISV licence resale (Atlassian, GitLab, Monday.com), B2B SaaS, and Professional & Managed Services. Revenue grew from £165M (FY22/23) to £225M (FY23/24). Led a global team of 100+ across NAMER, EMEA, and APAC. Built new RevOps function and led HubSpot CRM implementation.',
   },
   {
-    period: 'June 2021 — November 2022',
+    period: 'February 2021 — November 2022',
     role: 'Head of Sales, UK/Ireland — Gloves & Antiseptics',
     company: 'Mölnlycke Healthcare',
-    detail: '£35M P&L across Public & Private Healthcare, B2B, and Pharma Clean Room. Led a 15-person sales team. Also served as acting Head of Sales, Surgical Solutions UK (£89.5M revenue, February–June 2021).',
+    detail: '£35M P&L ownership across Public & Private Healthcare, B2B, and Pharma Clean Room. Led a 15-person sales team.',
   },
   {
     period: 'October 2018 — February 2021',
@@ -76,8 +76,8 @@ const About = () => {
                   className="font-body text-base leading-relaxed"
                   style={{ color: 'var(--text-secondary)' }}
                 >
-                  I've spent 13 years leading revenue organisations — from a 2-person startup
-                  to a 100+ person global team delivering a £260M revenue run rate. Along the way
+                  I've spent 13 years leading revenue organisations — from a 6-person startup
+                  to a 100+ person global team delivering a £225M+ revenue run rate. Along the way
                   I've operated at every growth stage that matters: the zero-to-one grind,
                   the first real scaling challenge at £30–50M, and the infrastructure complexity
                   of enterprise scale.
@@ -107,7 +107,7 @@ const About = () => {
                   className="font-body text-base leading-relaxed"
                   style={{ color: 'var(--text-secondary)' }}
                 >
-                  I'm based in Cardiff, UK. I work remotely.
+                  I'm based in Cardiff, UK. I work remotely and can travel as required.
                 </p>
               </div>
 
@@ -259,7 +259,7 @@ const About = () => {
                 </p>
                 <div className="space-y-4">
                   {[
-                    { value: '£260M', label: 'Peak revenue run rate' },
+                    { value: '£225M', label: 'Peak revenue run rate' },
                     { value: '100+', label: 'Global team at peak' },
                     { value: '13+', label: 'Years in commercial leadership' },
                     { value: '3', label: 'Continents managed' },
