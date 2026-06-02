@@ -1,6 +1,6 @@
 const stats = [
   { value: '£225M', label: 'Peak revenue responsibility' },
-  { value: '106', label: 'Person global team led' },
+  { value: '100+', label: 'Person global team led' },
   { value: '3', label: 'Distinct growth stages operated across' },
 ];
 

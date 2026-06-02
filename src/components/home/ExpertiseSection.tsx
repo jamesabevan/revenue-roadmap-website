@@ -11,19 +11,19 @@ const stages = [
   {
     label: 'Stage 02',
     range: '£30M → £50M',
-    role: 'National Sales Manager & Acting Head of Sales',
+    role: 'Head of Sales, UK/Ireland',
     company: 'Mölnlycke Healthcare',
     description:
-      'P&L responsibility for a £35M business across UK/Ireland & Benelux, leading a 25-person team. The first scaling inflection: building process, structure, and incentive architecture that works at genuine team scale.',
+      'P&L responsibility for a £35M business across UK/Ireland, leading a 15-person team. The first scaling inflection: building process, structure, and incentive architecture that works at genuine team scale.',
     insight: 'The point where founder-led sales motion breaks and professional revenue infrastructure has to replace it.',
   },
   {
     label: 'Stage 03',
-    range: '£160M → £225M',
+    range: '£165M → £225M',
     role: 'Global Head of Sales & Business Development',
     company: 'Adaptavist',
     description:
-      'Full P&L ownership, 106-person global team across NAMER, EMEA, and APAC. Built a new RevOps function, led a global CRM migration, restructured the entire go-to-market organisation. Revenue at scale requires infrastructure that most growing companies haven\'t built yet.',
+      'Full P&L ownership, 100+ person global team across NAMER, EMEA, and APAC. Built a new RevOps function, led a global CRM migration, restructured the entire go-to-market organisation. Revenue at scale requires infrastructure that most growing companies haven\'t built yet.',
     insight: 'What good looks like at the stage above where most of my clients are trying to get to.',
   },
 ];
