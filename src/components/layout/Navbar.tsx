@@ -22,7 +22,7 @@ const Navbar = () => {
     <nav
       className="sticky top-0 z-50"
       style={{
-        backgroundColor: 'rgba(11, 13, 20, 0.92)',
+        backgroundColor: 'rgba(250, 250, 248, 0.95)',
         backdropFilter: 'blur(12px)',
         borderBottom: '1px solid var(--border)',
       }}
@@ -83,7 +83,7 @@ const Navbar = () => {
             className="px-5 py-2 text-sm font-body font-medium transition-all"
             style={{
               backgroundColor: 'var(--gold)',
-              color: '#0B0D14',
+              color: '#FFFFFF',
               borderRadius: '4px',
             }}
             onMouseEnter={e => (e.currentTarget.style.backgroundColor = 'var(--gold-light)')}
@@ -137,7 +137,7 @@ const Navbar = () => {
             className="w-full mt-2 px-5 py-2.5 text-sm font-body font-medium"
             style={{
               backgroundColor: 'var(--gold)',
-              color: '#0B0D14',
+              color: '#FFFFFF',
               borderRadius: '4px',
             }}
           >

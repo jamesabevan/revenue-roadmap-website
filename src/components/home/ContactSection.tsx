@@ -277,7 +277,7 @@ const ContactSection = () => {
                   className="w-full py-3 text-sm font-body font-medium transition-all"
                   style={{
                     backgroundColor: 'var(--gold)',
-                    color: '#0B0D14',
+                    color: '#FFFFFF',
                     borderRadius: '4px',
                     border: 'none',
                     cursor: 'pointer',

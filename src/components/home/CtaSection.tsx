@@ -50,7 +50,7 @@ const CtaSection = () => {
             className="px-8 py-4 text-sm font-body font-medium transition-all"
             style={{
               backgroundColor: 'var(--gold)',
-              color: '#0B0D14',
+              color: '#FFFFFF',
               borderRadius: '4px',
             }}
             onMouseEnter={e => (e.currentTarget.style.backgroundColor = 'var(--gold-light)')}
