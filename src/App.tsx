@@ -15,6 +15,7 @@ import GoToMarketPage from "./pages/services/GoToMarketPage";
 import About from "./pages/About";
 import FreeConsultation from "./pages/FreeConsultation";
 import Newsletter from "./pages/Newsletter";
+import Blueprint from "./pages/Blueprint";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/services/revenue-operations" element={<RevenueOperationsPage />} />
           <Route path="/services/fractional-cro" element={<FractionalCROPage />} />
           <Route path="/services/go-to-market" element={<GoToMarketPage />} />
+          <Route path="/blueprint" element={<Blueprint />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
