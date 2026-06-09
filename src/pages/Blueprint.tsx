@@ -281,6 +281,18 @@ const Blueprint = () => {
             breaking, and the specific steps to fix it.
           </p>
 
+          <div style={{ marginBottom: '1.25rem' }}>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.9rem', color: '#B0B0AA', textDecoration: 'line-through', marginBottom: '0.2rem' }}>
+              £4,999
+            </div>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 'clamp(1.4rem, 3vw, 1.9rem)', fontWeight: 600, color: T.accent, marginBottom: '0.3rem' }}>
+              £3,500
+            </div>
+            <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', color: '#B0B0AA' }}>
+              Introductory rate — limited availability
+            </div>
+          </div>
+
           <button
             onClick={scrollToBook}
             style={{
@@ -299,7 +311,7 @@ const Blueprint = () => {
             onMouseEnter={e => (e.currentTarget.style.backgroundColor = T.accentDark)}
             onMouseLeave={e => (e.currentTarget.style.backgroundColor = T.accent)}
           >
-            Book a call · £3,500
+            Book a call
           </button>
 
           <p style={bodyText('0.85rem', T.textSec)}>
@@ -464,8 +476,16 @@ const Blueprint = () => {
           <SectionLabel>Pricing</SectionLabel>
 
           <div style={{ backgroundColor: T.bg, border: `1px solid ${T.border}`, borderRadius: '4px', padding: '2.5rem' }}>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 'clamp(1rem, 2.5vw, 1.35rem)', fontWeight: 500, color: T.text, marginBottom: '1.25rem' }}>
-              £3,500 · Fixed price · 15 working days
+            <div style={{ marginBottom: '1.25rem' }}>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.9rem', color: '#B0B0AA', textDecoration: 'line-through', marginBottom: '0.2rem' }}>
+                £4,999
+              </div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 'clamp(1.2rem, 2.5vw, 1.7rem)', fontWeight: 600, color: T.accent, marginBottom: '0.3rem' }}>
+                £3,500
+              </div>
+              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', color: '#B0B0AA' }}>
+                Introductory rate — limited availability
+              </div>
             </div>
             <p style={{ ...bodyText(), marginBottom: '2rem' }}>
               No retainer. No ongoing commitment. A single fixed-price engagement with a
