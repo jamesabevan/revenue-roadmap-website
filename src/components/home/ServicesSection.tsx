@@ -1,10 +1,10 @@
 const services = [
   {
     number: '01',
-    title: 'Revenue Diagnostic',
+    title: 'The Revenue Blueprint',
     description:
       'A structured analysis of your entire revenue engine: pipeline health, conversion rates, team structure, compensation design, CAC:LTV ratios, and channel efficiency. You get a clear picture of where value is leaking and exactly what to fix first.',
-    deliverable: 'Diagnostic report + prioritised action plan',
+    deliverable: 'Fixed price · 15 working days · thecroquet.com/blueprint',
   },
   {
     number: '02',
