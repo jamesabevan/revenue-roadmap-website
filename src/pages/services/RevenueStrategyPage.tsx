@@ -6,7 +6,7 @@ const RevenueStrategyPage = () => {
     <ServicePageTemplate
       title="Revenue Strategy Development"
       subtitle="Align your vision. Maximize your potential."
-      intro="A strong revenue strategy isn't a luxury—it's the foundation of growth. Whether you're gearing up for scale or course-correcting mid-flight, we help you build a clear, data-driven plan for sustainable success."
+      intro="A strong revenue strategy isn't a luxury. It's the foundation of growth. Whether you're gearing up for scale or course-correcting mid-flight, we help you build a clear, data-driven plan for sustainable success."
       benefits={[
         {
           title: "Clarity of Direction",

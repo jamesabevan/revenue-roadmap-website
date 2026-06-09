@@ -5,7 +5,7 @@ const stages = [
     role: 'Co-founder & CRO',
     company: 'Solcoro',
     description:
-      'Built the first revenue motion from zero. ICP definition, initial positioning, first hires, first pipeline, first close. What it actually feels like to create something from nothing — and what breaks when you try to scale it.',
+      'Built the first revenue motion from zero. ICP definition, initial positioning, first hires, first pipeline, first close. What it actually feels like to create something from nothing, and what breaks when you try to scale it.',
     insight: 'I know what a founder asks a fractional CRO to do. Because I\'ve been both.',
   },
   {
@@ -70,8 +70,8 @@ const ExpertiseSection = () => {
           className="font-body text-base leading-relaxed mb-16 max-w-2xl"
           style={{ color: 'var(--text-secondary)' }}
         >
-          Most advisors have operated at one revenue scale. The ability to see what's coming —
-          because I've already been there — is the difference between strategic advice
+          Most advisors have operated at one revenue scale. The ability to see what's coming,
+          because I've already been there, is the difference between strategic advice
           and lived experience.
         </p>
 

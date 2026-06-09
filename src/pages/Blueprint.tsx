@@ -172,7 +172,7 @@ const ContactForm = () => {
 
       {error && (
         <p style={{ ...bodyText('0.85rem', '#c0392b') }}>
-          Something went wrong — please try again or email james@thecroquet.com directly.
+          Something went wrong. Please try again or email james@thecroquet.com directly.
         </p>
       )}
 
@@ -278,7 +278,7 @@ const Blueprint = () => {
           <p style={{ ...bodyText('1.1rem'), maxWidth: '34rem', marginBottom: '2.5rem' }}>
             A structured diagnostic and fix roadmap for B2B SaaS businesses that have
             outgrown their current revenue motion. You get a clear picture of what's
-            breaking — and the specific steps to fix it.
+            breaking, and the specific steps to fix it.
           </p>
 
           <button
@@ -299,7 +299,7 @@ const Blueprint = () => {
             onMouseEnter={e => (e.currentTarget.style.backgroundColor = T.accentDark)}
             onMouseLeave={e => (e.currentTarget.style.backgroundColor = T.accent)}
           >
-            Book a call — £3,500
+            Book a call · £3,500
           </button>
 
           <p style={bodyText('0.85rem', T.textSec)}>
@@ -355,7 +355,7 @@ const Blueprint = () => {
               { term: 'Diagnostic scores', detail: 'Ten revenue infrastructure areas scored and explained' },
               { term: 'Root cause analysis', detail: 'Why each problem exists, not just that it exists' },
               { term: 'Fix roadmap', detail: 'Specific steps prioritised by impact and effort' },
-              { term: '90-day action plan', detail: 'What to do first, second, and third — and why' },
+              { term: '90-day action plan', detail: 'What to do first, second, and third, and in what order' },
             ].map(item => (
               <div key={item.term} style={{ backgroundColor: T.bg, padding: '2rem' }}>
                 <div style={{ ...bodyText('0.85rem', T.text), fontWeight: 600, marginBottom: '0.5rem' }}>
@@ -390,8 +390,8 @@ const Blueprint = () => {
                   {step.num}
                 </div>
                 <p style={bodyText('0.9rem')}>
-                  <span style={{ color: T.text, fontWeight: 600 }}>{step.label}</span>
-                  {' '}— {step.detail}
+                  <span style={{ color: T.text, fontWeight: 600 }}>{step.label}:</span>
+                  {' '}{step.detail}
                 </p>
               </div>
             ))}
@@ -470,7 +470,7 @@ const Blueprint = () => {
             <p style={{ ...bodyText(), marginBottom: '2rem' }}>
               No retainer. No ongoing commitment. A single fixed-price engagement with a
               defined deliverable. If you want help implementing the roadmap, that's
-              available — but the blueprint stands completely on its own.
+              available, but the blueprint stands completely on its own.
             </p>
             <button
               onClick={scrollToBook}

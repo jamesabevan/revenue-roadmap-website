@@ -14,7 +14,7 @@ const GoToMarketPage = () => {
         },
         {
           title: "Channel Strategy",
-          description: "Know where—and how—to show up."
+          description: "Know where and how to show up."
         },
         {
           title: "Compelling Messaging",

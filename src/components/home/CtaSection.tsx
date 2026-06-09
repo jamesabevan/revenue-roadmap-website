@@ -34,7 +34,7 @@ const CtaSection = () => {
             }}
           >
             If your revenue growth has plateaued
-            and you're not sure why — let's talk.
+            and you're not sure why, let's talk.
           </h2>
 
           <p

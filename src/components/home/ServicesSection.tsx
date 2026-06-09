@@ -3,7 +3,7 @@ const services = [
     number: '01',
     title: 'Revenue Diagnostic',
     description:
-      'A structured analysis of your entire revenue engine — pipeline health, conversion rates, team structure, compensation design, CAC:LTV ratios, and channel efficiency. You get a clear picture of where value is leaking and exactly what to fix first.',
+      'A structured analysis of your entire revenue engine: pipeline health, conversion rates, team structure, compensation design, CAC:LTV ratios, and channel efficiency. You get a clear picture of where value is leaking and exactly what to fix first.',
     deliverable: 'Diagnostic report + prioritised action plan',
   },
   {
@@ -18,13 +18,13 @@ const services = [
     title: 'Fractional CRO Leadership',
     description:
       'Part-time, senior revenue leadership for companies that need C-suite capability without the full-time cost or commitment. I sit in leadership meetings, challenge the assumptions, hold the team to the plan, and act as the revenue voice in board conversations.',
-    deliverable: 'Ongoing engagement — typically 1–3 days per week',
+    deliverable: 'Ongoing engagement, typically 1–3 days per week',
   },
   {
     number: '04',
     title: 'Board & Investor Readiness',
     description:
-      'Preparing the revenue narrative for Series C conversations and beyond. The metrics that matter, the infrastructure story, the efficiency ratios, and the honest answers to the hard questions — before the investor asks them.',
+      'Preparing the revenue narrative for Series C conversations and beyond. The metrics that matter, the infrastructure story, the efficiency ratios, and the honest answers to the hard questions before the investor starts asking them.',
     deliverable: 'Revenue narrative + board deck support',
   },
 ];
@@ -67,7 +67,7 @@ const ServicesSection = () => {
             className="font-body text-sm max-w-xs"
             style={{ color: 'var(--text-muted)' }}
           >
-            Every engagement starts with understanding the actual problem — not the symptom.
+            Every engagement starts with understanding the actual problem, not the symptom.
           </p>
         </div>
 

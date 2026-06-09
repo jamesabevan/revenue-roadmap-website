@@ -6,7 +6,7 @@ const FractionalCROPage = () => {
     <ServicePageTemplate
       title="Fractional CRO"
       subtitle="Senior revenue leadership, without the overhead."
-      intro="Whether you need a revenue leader to guide the journey—or a fresh perspective on how to scale—we step in as your Fractional CRO. Strategic leadership. Flexible commitment."
+      intro="Whether you need a revenue leader to guide the journey or a fresh perspective on how to scale, we step in as your Fractional CRO. Strategic leadership. Flexible commitment."
       benefits={[
         {
           title: "Executive-Level Insight",

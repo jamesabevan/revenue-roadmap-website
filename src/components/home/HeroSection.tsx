@@ -68,7 +68,7 @@ const HeroSection = () => {
           >
             I work with post-Series B B2B SaaS and PE-backed technology businesses
             to diagnose and fix the revenue infrastructure problems that emerge
-            between £5M and £50M ARR — before the board starts asking questions
+            between £5M and £50M ARR, before the board starts asking questions
             nobody can answer.
           </p>
 

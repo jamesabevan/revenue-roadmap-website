@@ -6,7 +6,7 @@ const SalesProcessPage = () => {
     <ServicePageTemplate
       title="Sales Process Optimization"
       subtitle="Transform your pipeline into a conversion engine."
-      intro="Your sales process should power growth—not get in the way. We diagnose inefficiencies, identify friction points, and rebuild your sales engine for consistency, clarity, and conversion."
+      intro="Your sales process should power growth, not get in the way. We diagnose inefficiencies, identify friction points, and rebuild your sales engine for consistency, clarity, and conversion."
       benefits={[
         {
           title: "Faster Deal Velocity",

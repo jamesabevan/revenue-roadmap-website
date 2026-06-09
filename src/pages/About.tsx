@@ -5,7 +5,7 @@ const credentials = [
     period: 'March 2025 — Present',
     role: 'Founder & Fractional CRO',
     company: 'CROquet',
-    detail: 'Fractional CRO and commercial consulting practice. Engagements include: Solcoro — fractional CRO (April 2025–present), building the full commercial function from scratch and driving ARR from $0 to $200k+; Hii-Life — GTM redesign ahead of PE investment (June–November 2025); Brulot — GTM playbook, ICP mapping, sales process design, and CRM implementation (May–June 2025 & January 2026).',
+    detail: 'Fractional CRO and commercial consulting practice. Engagements include: Solcoro, fractional CRO (April 2025–present), building the full commercial function from scratch and driving ARR from $0 to $200k+; Hii-Life, GTM redesign ahead of PE investment (June–November 2025); Brulot, GTM playbook, ICP mapping, sales process design, and CRM implementation (May–June 2025 & January 2026).',
   },
   {
     period: 'November 2022 — March 2025',
@@ -76,7 +76,7 @@ const About = () => {
                   className="font-body text-base leading-relaxed"
                   style={{ color: 'var(--text-secondary)' }}
                 >
-                  I've spent 13 years leading revenue organisations — from a 6-person startup
+                  I've spent 13 years leading revenue organisations: from a 6-person startup
                   to a 100+ person global team delivering a £225M+ revenue run rate. Along the way
                   I've operated at every growth stage that matters: the zero-to-one grind,
                   the first real scaling challenge at £30–50M, and the infrastructure complexity
@@ -98,8 +98,8 @@ const About = () => {
                 >
                   In early 2025 I launched CROquet, my fractional CRO and commercial consulting
                   practice. I work with post-Series B B2B SaaS and PE-backed technology businesses
-                  — diagnosing what's actually broken in the revenue engine, designing the
-                  infrastructure that fixes it, and providing senior leadership through the
+                  I diagnose what's actually broken in the revenue engine, design the
+                  infrastructure that fixes it, and provide senior leadership through the
                   transition. Not as a full-time hire. Not as a management consultant. As a
                   working operator who has done it before.
                 </p>
@@ -126,7 +126,7 @@ const About = () => {
                 >
                   "I don't believe in generic strategic advice. I believe in looking at the
                   numbers, identifying where value is actually leaking, and building the
-                  specific infrastructure that fixes it — for this business, at this stage."
+                  specific infrastructure that fixes it, for this business, at this stage."
                 </p>
               </div>
 

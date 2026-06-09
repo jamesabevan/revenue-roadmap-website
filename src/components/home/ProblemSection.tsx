@@ -52,7 +52,7 @@ const ProblemSection = () => {
             >
               At £2M ARR, you could sell. At £20M, the same motion breaks. It's not
               a motivation problem or a headcount problem. It's a revenue
-              infrastructure problem — and most companies don't realise it until
+              infrastructure problem. Most companies don't realise it until
               they're already burning too much capital to get too little growth.
             </p>
 

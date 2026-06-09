@@ -268,7 +268,7 @@ const ContactSection = () => {
 
                 {error && (
                   <p className="font-body text-sm" style={{ color: '#e05c5c' }}>
-                    Something went wrong — please try again or email james@thecroquet.com directly.
+                    Something went wrong. Please try again or email james@thecroquet.com directly.
                   </p>
                 )}
 
